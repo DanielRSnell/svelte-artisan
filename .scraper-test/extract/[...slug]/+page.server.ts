@@ -1,62 +1,60 @@
 import axios from 'axios';
-  import * as cheerio from 'cheerio';
-  
-  export async function load({params, page}) {
-    let { slug } = params;
-    console.log(slug)
+import * as cheerio from 'cheerio';
 
-    const url = slug;
+export async function load({ params, page }) {
+	let { slug } = params;
+	console.log(slug);
 
-    try {
-      const response = await axios.get(url);
+	const url = slug;
 
-      if (!response) {
-        throw new Error('Not found');
-      }
+	try {
+		const response = await axios.get(url);
 
-      const $ = cheerio.load(response.data);
-    
-      // update all script tags to have a unique id and be absolute
-        $('script').each((i, element) => {
-            const currentSrc = $(element).attr('src');
-            if (currentSrc && currentSrc.startsWith('/')) {
-                $(element).attr('src', `${url}${currentSrc}`);
-            }
-            $(element).attr('id', `script-${i}`);
-        });
-        
+		if (!response) {
+			throw new Error('Not found');
+		}
 
-      // Update all link takes that aren't absolute to be absolute
-        $('a').each((i, element) => {
-            const currentHref = $(element).attr('href');
-            if (currentHref && currentHref.startsWith('/')) {
-                $(element).attr('href', `${url}${currentHref}`);
-            }
-        });
+		const $ = cheerio.load(response.data);
 
-        // Update all image sources that aren't absolute to be absolute
-        $('img').each((i, element) => {
-            const currentSrc = $(element).attr('src');
-            if (currentSrc && currentSrc.startsWith('/')) {
-                $(element).attr('src', `${url}${currentSrc}`);
-            }
-        });
+		// update all script tags to have a unique id and be absolute
+		$('script').each((i, element) => {
+			const currentSrc = $(element).attr('src');
+			if (currentSrc && currentSrc.startsWith('/')) {
+				$(element).attr('src', `${url}${currentSrc}`);
+			}
+			$(element).attr('id', `script-${i}`);
+		});
 
-      const updatedHtmlContent = $.html();
+		// Update all link takes that aren't absolute to be absolute
+		$('a').each((i, element) => {
+			const currentHref = $(element).attr('href');
+			if (currentHref && currentHref.startsWith('/')) {
+				$(element).attr('href', `${url}${currentHref}`);
+			}
+		});
 
-      return {
-        props: {
-          bodyContent: updatedHtmlContent,
-        }
-      }
+		// Update all image sources that aren't absolute to be absolute
+		$('img').each((i, element) => {
+			const currentSrc = $(element).attr('src');
+			if (currentSrc && currentSrc.startsWith('/')) {
+				$(element).attr('src', `${url}${currentSrc}`);
+			}
+		});
 
-    } catch (error) {
-      console.error('Failed to fetch content from data:', url);
+		const updatedHtmlContent = $.html();
 
-      return {
-        props: {
-          bodyContent: '<h1 id="lost">Not Found</h1>',
-        },
-      }
-    }
-  }
+		return {
+			props: {
+				bodyContent: updatedHtmlContent
+			}
+		};
+	} catch (error) {
+		console.error('Failed to fetch content from data:', url);
+
+		return {
+			props: {
+				bodyContent: '<h1 id="lost">Not Found</h1>'
+			}
+		};
+	}
+}

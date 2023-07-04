@@ -1,0 +1,77 @@
+Arguments: 
+  /Users/notable/.nvm/versions/node/v20.1.0/bin/node /Users/notable/.cache/node/corepack/yarn/1.22.19/bin/yarn.js install --production=false
+
+PATH: 
+  /var/folders/zt/yw83l38925sgl4zrjbb20kk40000gn/T/yarn--1688456356658-0.6578282750988831:/Users/notable/CORE/activity/projects/artisan-network/frontend-framework/node_modules/.bin:/Users/notable/.config/yarn/link/node_modules/.bin:/Users/notable/.nvm/versions/node/v20.1.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/notable/.nvm/versions/node/v20.1.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/notable/.nvm/versions/node/v20.1.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/notable/.wasmer/bin:/Users/notable/Library/pnpm:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/notable/.nvm/versions/node/v20.1.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/notable/.wasmer/bin:/Users/notable/Library/pnpm:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/notable/.nvm/versions/node/v20.1.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/notable/.wasmer/globals/wapm_packages/.bin:/usr/local/bin:/Users/notable/.wasmer/globals/wapm_packages/.bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.1.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile '/Users/notable/Library/Caches/Yarn/v6/npm-minimatch-3.1.2-19cd194bfd3e428f049a70817c038d89ab4be35b-integrity/node_modules/minimatch/LICENSE' -> '/Users/notable/CORE/activity/projects/artisan-network/frontend-framework/node_modules/@eslint/eslintrc/node_modules/minimatch/LICENSE'
+
+npm manifest: 
+  {
+  	"name": "artisan-framework",
+  	"version": "0.0.1",
+  	"private": true,
+  	"scripts": {
+  		"build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile",
+  		"dev": "vite dev",
+  		"build": "vite build",
+  		"preview": "vite preview",
+  		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+  		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+  		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+  		"format": "prettier --plugin-search-dir . --write ."
+  	},
+  	"devDependencies": {
+  		"@floating-ui/dom": "^1.4.3",
+  		"@skeletonlabs/skeleton": "^1.8.0",
+  		"@sveltejs/adapter-auto": "^2.0.0",
+  		"@sveltejs/adapter-static": "^2.0.2",
+  		"@sveltejs/kit": "^1.5.0",
+  		"@tailwindcss/forms": "^0.5.3",
+  		"@tailwindcss/typography": "^0.5.9",
+  		"@typescript-eslint/eslint-plugin": "^5.45.0",
+  		"@typescript-eslint/parser": "^5.45.0",
+  		"autoprefixer": "^10.4.14",
+  		"eslint": "^8.28.0",
+  		"eslint-config-prettier": "^8.5.0",
+  		"eslint-plugin-svelte": "^2.26.0",
+  		"got": "^13.0.0",
+  		"highlight.js": "^11.8.0",
+  		"install": "^0.13.0",
+  		"jsdom": "^22.1.0",
+  		"npm": "^9.7.2",
+  		"postcss": "^8.4.24",
+  		"prettier": "^2.8.0",
+  		"prettier-plugin-svelte": "^2.10.1",
+  		"svelte": "^3.54.0",
+  		"svelte-check": "^3.0.1",
+  		"tailwindcss": "^3.3.2",
+  		"tslib": "^2.4.1",
+  		"typescript": "^5.0.0",
+  		"unist-util-visit": "^4.1.2",
+  		"vite": "^4.3.0"
+  	},
+  	"type": "module",
+  	"dependencies": {
+  		"axios": "^1.4.0",
+  		"cheerio": "1.0.0-rc.12",
+  		"htmx.org": "^1.9.2",
+  		"tailwind-editor": "^0.3.0"
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

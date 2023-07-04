@@ -1,68 +1,68 @@
 import { chromium } from 'playwright';
-import * as cheerio from 'cheerio'
+import * as cheerio from 'cheerio';
 
 export async function load() {
-    const project = 'https://edg.io'
-    const url = `${project}/`;
-    
-    try {
-        const browser = await chromium.launch();
-        const context = await browser.newContext();
-        const page = await context.newPage();
-        await page.goto(url);
+	const project = 'https://edg.io';
+	const url = `${project}/`;
 
-        let bodyHTML = await page.evaluate(() => document.documentElement.outerHTML);
+	try {
+		const browser = await chromium.launch();
+		const context = await browser.newContext();
+		const page = await context.newPage();
+		await page.goto(url);
 
-        // Add your base URL to relative paths.
-        // bodyHTML = bodyHTML.replace(/href="\//g, `href="${project}/`);
-        // bodyHTML = bodyHTML.replace(/src="\//g, `src="${project}/`);
+		let bodyHTML = await page.evaluate(() => document.documentElement.outerHTML);
 
-        // // Remove base URL from the href attributes in anchor tags
-        // bodyHTML = bodyHTML.replace(new RegExp(`href="${project}`, 'g'), 'href="');
+		// Add your base URL to relative paths.
+		// bodyHTML = bodyHTML.replace(/href="\//g, `href="${project}/`);
+		// bodyHTML = bodyHTML.replace(/src="\//g, `src="${project}/`);
 
-        await browser.close();
+		// // Remove base URL from the href attributes in anchor tags
+		// bodyHTML = bodyHTML.replace(new RegExp(`href="${project}`, 'g'), 'href="');
 
-        const $ = cheerio.load(bodyHTML);
+		await browser.close();
 
-         // // Update 'src' attribute of tags.
-    $('[src]').each((i, element) => {
-        const currentSrc = $(element).attr('src');
-        if (currentSrc.startsWith('/')) {
-            $(element).attr('src', `${url}${currentSrc}`);
-        }
-    });
+		const $ = cheerio.load(bodyHTML);
 
-    // Update 'href' attribute of tags.
-    $('[href]').each((i, element) => {
-        const currentHref = $(element).attr('href');
-        if (currentHref.startsWith('/')) {
-            $(element).attr('href', `${url}${currentHref}`);
-        }
-    });
+		// // Update 'src' attribute of tags.
+		$('[src]').each((i, element) => {
+			const currentSrc = $(element).attr('src');
+			if (currentSrc.startsWith('/')) {
+				$(element).attr('src', `${url}${currentSrc}`);
+			}
+		});
 
-        $('a').each((i, element) => {
-            const currentHref = $(element).attr('href');
-            if (currentHref && currentHref.startsWith(project)) {
-                $(element).attr('href', currentHref.replace(project, ''));
-            }
-        });
+		// Update 'href' attribute of tags.
+		$('[href]').each((i, element) => {
+			const currentHref = $(element).attr('href');
+			if (currentHref.startsWith('/')) {
+				$(element).attr('href', `${url}${currentHref}`);
+			}
+		});
 
-        $('#__NEXT_DATA__').remove();
+		$('a').each((i, element) => {
+			const currentHref = $(element).attr('href');
+			if (currentHref && currentHref.startsWith(project)) {
+				$(element).attr('href', currentHref.replace(project, ''));
+			}
+		});
 
-        return {
-            props: {
-                bodyContent: $.html(),
-            }
-        }
-    } catch (error) {
-        console.error('Failed to fetch content from data:', project);
+		$('#__NEXT_DATA__').remove();
 
-        // Return default values or handle the error as needed
-        return {
-            props: {
-                bodyContent: '<h1 id="lost">Not Found</h1>',
-                headContent: '<script id="lost-script" />',
-            },
-        }
-    }
+		return {
+			props: {
+				bodyContent: $.html()
+			}
+		};
+	} catch (error) {
+		console.error('Failed to fetch content from data:', project);
+
+		// Return default values or handle the error as needed
+		return {
+			props: {
+				bodyContent: '<h1 id="lost">Not Found</h1>',
+				headContent: '<script id="lost-script" />'
+			}
+		};
+	}
 }
