@@ -1,56 +1,55 @@
+export const prerender = true;
+
 import got from 'got';
-import { JSDOM } from 'jsdom';
+import * as cheerio from 'cheerio'
 
-export async function load() {
-	const project = 'https://tailwindui.com';
-	const url = `${project}/`;
+export async function load({ params }) {
+	const config = {
+		project: 'https://domartisan.com',
+		absolute: false
+	};
 
+	function GenerateRoute() {
+		const keys = Object.keys(params);
+		let route = '';
+		keys.forEach((key) => {
+			route += params[key] + '/';
+		});
+		return route;
+	}
+
+	const url = `${config.project}/` + GenerateRoute();
+    console.log(`🔥 ${url} is building.`)
 	try {
-		const response = await got(url);
+		const response = await got(url.split('/?').join('?'));
 
 		if (!response) {
 			throw new Error('Not found');
 		}
 
-		const dom = new JSDOM(response.body);
-		const document = dom.window.document;
+		const $ = cheerio.load(response.body);
 
-		// Update 'src' attribute of tags.
-		const srcElements = document.querySelectorAll('[src]');
-		srcElements.forEach((element) => {
-			const currentSrc = element.getAttribute('src');
-			if (currentSrc.startsWith('/')) {
-				element.setAttribute('src', `${project}${currentSrc}`);
-			}
-		});
+// 		$('a[href], img[src]').each((i, element) => {
+//     let attr = $(element).is('a') ? 'href' : 'src';
 
-		// Update 'href' attribute of tags.
-		const hrefElements = document.querySelectorAll('[href]');
-		hrefElements.forEach((element) => {
-			const currentHref = element.getAttribute('href');
-			if (currentHref.startsWith('/')) {
-				element.setAttribute('href', `${project}${currentHref}`);
-			}
-		});
+//     let parsedURL = url.parse($(element).attr(attr), true, true);
+//     if (parsedURL.host === url.parse(baseURL).host) {
+//         let relativePath = parsedURL.pathname + (parsedURL.search || '') + (parsedURL.hash || '');
+//         $(element).attr(attr, relativePath);
+//     }
+// });
 
-		// Update 'href' attribute of anchor tags.
-		const aElements = document.querySelectorAll('a');
-		aElements.forEach((element) => {
-			const currentHref = element.getAttribute('href');
-			if (currentHref && currentHref.startsWith(project)) {
-				element.setAttribute('href', currentHref.replace(project, ''));
-			}
-		});
+		const dom = $('html').html();
+
 
 		return {
 			props: {
-				bodyContent: dom.serialize()
+				bodyContent: dom
 			}
 		};
 	} catch (error) {
-		console.error('Failed to fetch content from data:', project);
+		console.error('Failed to fetch content from data:', url);
 
-		// Return default values or handle the error as needed
 		return {
 			props: {
 				bodyContent: '<h1 id="lost">Not Found</h1>',
@@ -59,5 +58,3 @@ export async function load() {
 		};
 	}
 }
-
-export const prerender = true;

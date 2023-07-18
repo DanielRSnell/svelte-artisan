@@ -1,0 +1,92 @@
+:root {
+  --sample-color: #000;
+  --sample-size: 62rem;
+  --sample-space: 4rem;
+  /*You can add anything as a combination for global variables*/
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  /* Try to put all component level styles whether traditional or tailwind CSS here, page level should go in customizer or WPCodeBox*/
+  .article-h1 {
+    display: none !important;
+  }
+
+  body>header {
+    display: none !important;
+  }
+
+  .container {
+    width: 100% !;
+    max-width: 100% !important;
+  }
+
+  .skip-link {
+    display: none !important;
+  }
+
+  .animation-wrapper {
+    width: 50%;
+    padding-bottom: 10%;
+  }
+
+  .sphere path {
+    fill: url(#sphereGradient);
+    stroke-width: 1px;
+    stroke: rgba(80, 80, 80, 0.05);
+    backface-visibility: hidden;
+  }
+
+  @media (min-width: 500px) {
+    .sphere path {
+      stroke-width: 0.4px;
+    }
+  }
+
+  .bg-conic-gradient {
+    background: linear-gradient(90deg,
+        #44ff9a -0.55%,
+        #44b0ff 22.86%,
+        #8b44ff 48.36%,
+        #ff6644 73.33%,
+        #ebff70 99.34%);
+    animation: RGBBreathing 5s infinite, ShadowBreathing 5s infinite;
+    backdrop-filter: blur(3px);
+  }
+
+  @keyframes RGBBreathing {
+    0% {
+      background-color: rgba(255, 0, 0, 0.85);
+    }
+
+    33% {
+      background-color: rgba(0, 255, 0, 0.5);
+    }
+
+    66% {
+      background-color: rgba(0, 0, 255, 0.5);
+    }
+
+    100% {
+      background-color: rgba(255, 0, 0, 0.5);
+    }
+  }
+
+  @keyframes ShadowBreathing {
+    0% {
+      box-shadow: 0 4px 8px 15px rgba(255, 0, 0, 0.75);
+    }
+
+    50% {
+      box-shadow: 0 4px 8px 15px rgba(255, 255, 255, 0.75);
+    }
+
+    100% {
+      box-shadow: 0 4px 8px 15px rgba(255, 0, 0, 0.75);
+    }
+  }
+}
