@@ -11,9 +11,6 @@ dependencies:
   cheerio:
     specifier: 1.0.0-rc.12
     version: 1.0.0-rc.12
-  htmx.org:
-    specifier: ^1.9.2
-    version: 1.9.2
 
 devDependencies:
   '@floating-ui/dom':
@@ -25,6 +22,9 @@ devDependencies:
   '@sveltejs/adapter-auto':
     specifier: ^2.0.0
     version: 2.1.0(@sveltejs/kit@1.22.1)
+  '@sveltejs/adapter-cloudflare':
+    specifier: ^2.3.1
+    version: 2.3.1(@sveltejs/kit@1.22.1)
   '@sveltejs/adapter-node':
     specifier: ^1.3.0
     version: 1.3.1(@sveltejs/kit@1.22.1)
@@ -169,6 +169,10 @@ packages:
       '@babel/helper-validator-identifier': 7.22.5
       chalk: 2.4.2
       js-tokens: 4.0.0
+    dev: true
+
+  /@cloudflare/workers-types@4.20230717.0:
+    resolution: {integrity: sha512-OJWM1s0n9Il+GjfHvZhEcUGC+qY9IsijMtzRBDRpwSUR2jTy1WdjS9+SEh7sJlNQX2WzHQCgJMGjH2lI/Tf+tQ==}
     dev: true
 
   /@esbuild/android-arm64@0.18.11:
@@ -619,6 +623,17 @@ packages:
     dependencies:
       '@sveltejs/kit': 1.22.1(svelte@3.59.2)(vite@4.4.2)
       import-meta-resolve: 3.0.0
+    dev: true
+
+  /@sveltejs/adapter-cloudflare@2.3.1(@sveltejs/kit@1.22.1):
+    resolution: {integrity: sha512-T+A8LZf70T6hqXj+amN+2mkaZrVDhrr2mzqFUlw2H8M5ClTkBVc8F0EEDQUaRlSQ+RBIFXIltPWUjfSNfb5uPw==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.0.0
+    dependencies:
+      '@cloudflare/workers-types': 4.20230717.0
+      '@sveltejs/kit': 1.22.1(svelte@3.59.2)(vite@4.4.2)
+      esbuild: 0.18.11
+      worktop: 0.8.0-next.15
     dev: true
 
   /@sveltejs/adapter-node@1.3.1(@sveltejs/kit@1.22.1):
@@ -2401,10 +2416,6 @@ packages:
       entities: 4.5.0
     dev: false
 
-  /htmx.org@1.9.2:
-    resolution: {integrity: sha512-ZGbucKcalQyXdGUl+4Zt3xdRDPmNy70yNhMyDG1eDYUm/ImxmSo2rhIBDa53XitrAVhA+/CGgry+wJ1SO77wrA==}
-    dev: false
-
   /http-cache-semantics@4.1.1:
     resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
     dev: true
@@ -3538,6 +3549,11 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /regexparam@2.0.1:
+    resolution: {integrity: sha512-zRgSaYemnNYxUv+/5SeoHI0eJIgTL/A2pUtXUPLHQxUldagouJ9p+K6IbIZ/JiQuCEv2E2B1O11SjVQy3aMCkw==}
+    engines: {node: '>=8'}
+    dev: true
+
   /registry-auth-token@3.3.2:
     resolution: {integrity: sha512-JL39c60XlzCVgNrO+qq68FoNb56w/m7JYvGR2jT5iR1xBrUA3Mfx5Twk5rqTThPmQKMWydGmq8oFtDlxfrmxnQ==}
     dependencies:
@@ -4375,6 +4391,14 @@ packages:
   /word-wrap@1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /worktop@0.8.0-next.15:
+    resolution: {integrity: sha512-0ycNO52P6nVwsjr1y20zuf0nqJatAb8L7MODBfQIxbxndHV5O4s50oZZMHWhJG1RLpHwbK0Epq8aaQK4E2GlgQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      mrmime: 1.0.1
+      regexparam: 2.0.1
     dev: true
 
   /wrap-ansi@7.0.0:
