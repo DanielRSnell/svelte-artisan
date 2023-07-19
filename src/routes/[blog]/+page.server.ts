@@ -1,7 +1,8 @@
-export const prerender = true;
-
 import got from 'got';
-import * as cheerio from 'cheerio'
+import * as cheerio from 'cheerio';
+import * as urlModule from 'url';
+
+export const prerender = true;
 
 export async function load({ params }) {
 	const config = {
@@ -29,18 +30,20 @@ export async function load({ params }) {
 
 		const $ = cheerio.load(response.body);
 
-// 		$('a[href], img[src]').each((i, element) => {
-//     let attr = $(element).is('a') ? 'href' : 'src';
+		$('a[href], img[src]').each((i, element) => {
+    		let attr = $(element).is('a') ? 'href' : 'src';
+    		let elementUrl = $(element).attr(attr);
 
-//     let parsedURL = url.parse($(element).attr(attr), true, true);
-//     if (parsedURL.host === url.parse(baseURL).host) {
-//         let relativePath = parsedURL.pathname + (parsedURL.search || '') + (parsedURL.hash || '');
-//         $(element).attr(attr, relativePath);
-//     }
-// });
+    		if (elementUrl) {
+        		let parsedURL = urlModule.parse(elementUrl, true, true);
+        		if (parsedURL.host === urlModule.parse(config.project).host) {
+            		let relativePath = parsedURL.pathname + (parsedURL.search || '') + (parsedURL.hash || '');
+            		$(element).attr(attr, relativePath);
+        		}
+    		}
+		});
 
 		const dom = $('html').html();
-
 
 		return {
 			props: {
