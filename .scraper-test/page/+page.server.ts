@@ -19,7 +19,7 @@ export async function load({ params }) {
 	}
 
 	const url = `${config.project}/` + GenerateRoute();
-	console.log(`🔥 ${url} is building.`)
+	console.log(`🔥 ${url} is building.`);
 	try {
 		const response = await got(url.split('/?').join('?'));
 
@@ -59,63 +59,61 @@ export async function load({ params }) {
 		}
 
 		// Select the form
-const form = dom.window.document.querySelector('.newsletter-form');
+		const form = dom.window.document.querySelector('.newsletter-form');
 
-// Modify the action attribute and add HTMX attributes
-if (form) {
-  form.action = "/subscribe";
-  form.removeAttribute('action');
-  form.setAttribute('hx-post', '/subscribe');
-  form.setAttribute('hx-trigger', 'submit');
-}
+		// Modify the action attribute and add HTMX attributes
+		if (form) {
+			form.action = '/subscribe';
+			form.removeAttribute('action');
+			form.setAttribute('hx-post', '/subscribe');
+			form.setAttribute('hx-trigger', 'submit');
+		}
 
-const aElements = dom.window.document.querySelectorAll('a');
+		const aElements = dom.window.document.querySelectorAll('a');
 
-// Iterate over 'a' elements
-aElements.forEach((aElement) => {
-  // Skip if 'noopener' attribute exists
-  if (aElement.rel.includes('noopener')) return;
+		// Iterate over 'a' elements
+		aElements.forEach((aElement) => {
+			// Skip if 'noopener' attribute exists
+			if (aElement.rel.includes('noopener')) return;
 
-  // Parse the URL
-  const url = new URL(aElement.href);
+			// Parse the URL
+			const url = new URL(aElement.href);
 
-  // Change href to a relative URL
-  aElement.href = url.pathname + url.search + url.hash;
+			// Change href to a relative URL
+			aElement.href = url.pathname + url.search + url.hash;
 
-  // Add the hx-boost attribute
-  aElement.setAttribute('hx-boost', 'true');
-});
+			// Add the hx-boost attribute
+			aElement.setAttribute('hx-boost', 'true');
+		});
 
+		let button = document.querySelector('button');
 
-let button = document.querySelector('button');
+		// Create a new anchor element
+		let a = document.createElement('a');
 
-// Create a new anchor element
-let a = document.createElement('a');
+		// Copy attributes from the button to the anchor
+		for (let i = 0; i < button.attributes.length; i++) {
+			let attr = button.attributes[i];
+			a.setAttribute(attr.name, attr.value);
+		}
 
-// Copy attributes from the button to the anchor
-for (let i = 0; i < button.attributes.length; i++) {
-  let attr = button.attributes[i];
-  a.setAttribute(attr.name, attr.value);
-}
+		// Set href attribute using the button's value
+		a.href = `${config.project}/page/${button.value}`;
 
-// Set href attribute using the button's value
-a.href = `${config.project}/page/${button.value}`;
+		// Copy the button's innerHTML to the anchor
+		a.innerHTML = button.innerHTML;
 
-// Copy the button's innerHTML to the anchor
-a.innerHTML = button.innerHTML;
+		// Replace the button with the anchor in the DOM
+		button.parentNode.replaceChild(a, button);
 
-// Replace the button with the anchor in the DOM
-button.parentNode.replaceChild(a, button);
+		// Check for header and footer - then remove
+		// Select the header and footer by their tag
+		const header = dom.window.document.querySelector('header');
+		const footer = dom.window.document.querySelector('footer');
 
-// Check for header and footer - then remove 
-// Select the header and footer by their tag
-const header = dom.window.document.querySelector('header');
-const footer = dom.window.document.querySelector('footer');
-
-
-// Remove the header and footer
-if (header) header.remove();
-if (footer) footer.remove();
+		// Remove the header and footer
+		if (header) header.remove();
+		if (footer) footer.remove();
 
 		return {
 			props: {
@@ -133,4 +131,3 @@ if (footer) footer.remove();
 		};
 	}
 }
-

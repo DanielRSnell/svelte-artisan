@@ -4,7 +4,6 @@
     const { bodyContent } = data.props;
 </script>
 
-
 {@html bodyContent}
 
 

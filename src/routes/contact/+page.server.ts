@@ -20,7 +20,7 @@ export async function load({ params }) {
 	}
 
 	const url = `${config.project}/` + GenerateRoute();
-    console.log(`🔥 ${url} is building.`)
+	console.log(`🔥 ${url} is building.`);
 	try {
 		const response = await got(url.split('/?').join('?'));
 
@@ -31,16 +31,16 @@ export async function load({ params }) {
 		const $ = cheerio.load(response.body);
 
 		$('a[href], img[src]').each((i, element) => {
-    		let attr = $(element).is('a') ? 'href' : 'src';
-    		let elementUrl = $(element).attr(attr);
+			let attr = $(element).is('a') ? 'href' : 'src';
+			let elementUrl = $(element).attr(attr);
 
-    		if (elementUrl) {
-        		let parsedURL = urlModule.parse(elementUrl, true, true);
-        		if (parsedURL.host === urlModule.parse(config.project).host) {
-            		let relativePath = parsedURL.pathname + (parsedURL.search || '') + (parsedURL.hash || '');
-            		$(element).attr(attr, relativePath);
-        		}
-    		}
+			if (elementUrl) {
+				let parsedURL = urlModule.parse(elementUrl, true, true);
+				if (parsedURL.host === urlModule.parse(config.project).host) {
+					let relativePath = parsedURL.pathname + (parsedURL.search || '') + (parsedURL.hash || '');
+					$(element).attr(attr, relativePath);
+				}
+			}
 		});
 
 		const dom = $('html').html();

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="../_app/immutable/assets/0.db809e4d.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.29a8c521.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.4303dc40.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.878fb3f0.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.876817f6.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.d346ca21.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.c430bc78.js"><!-- HEAD_svelte-vd0yh1_START --><!-- HEAD_svelte-vd0yh1_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+		<div style="display: contents">
+
+
+
+
+<!-- HTML_TAG_START -->
+<header class="grayscale">
+<div class="mx-auto max-w-7xl lc-block invert">
+<nav class="flex items-center w-full h-24 select-none" x-data="{ showMenu: false }">
+<div class="relative flex flex-wrap items-start justify-between w-full mx-auto font-medium md:items-center md:h-24 md:justify-between lc-block"><a href="/" class="flex items-center w-1/4 py-4 pl-6 pr-4 space-x-2 font-extrabold text-white md:py-0 lc-block button" role="button"><img src="https://artisan-dev.blockartisan.com/wp-content/uploads/2023/07/White-Icon.svg" class="w-auto h-6 -translate-y-px wp-image-166 lc-highlight-currently-editing" width="" height="185" srcset="" sizes="" alt="">
+<span class="text-2xl font-semibold lc-block">Artisan</span></a>
+<div :class="{'flex': showMenu, 'hidden md:flex': !showMenu }" class="absolute z-50 flex-col items-center justify-center w-full h-auto px-2 text-center border text-gray-400 -translate-x-1/2 border-0 border-gray-100 rounded-md md:border md:w-auto md:h-10 left-1/2 md:flex-row md:items-center lc-block">
+<a href="/#performance" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center text-white md:py-2 group md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button" role="button"><span class=" lc-block">Performance</span>
+<span class="absolute bottom-0 left-0 w-full h-px duration-300 ease-out translate-y-px bg-gradient-to-r md:from-transparent md:via-gray-700 md:to-gray-100 from-transparent via-gray-600 to-gray-900 lc-block"></span></a>
+<a href="/#features" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button" role="button">
+<span class=" lc-block">Security</span>
+<span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block"></span>
+</a>
+<a href="/#teams" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button" role="button">
+<span class=" lc-block">Teams</span>
+<span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block"></span>
+</a>
+<a href="/blog" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button" role="button">
+<span class=" lc-block">Blog</span>
+<span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block"></span>
+</a>
+<a href="/contact" class="relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button" role="button">
+<span class=" lc-block">Contact</span>
+<span class="absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block"></span>
+</a>
+</div>
+<div class="fixed top-0 left-0 z-40 items-center w-full h-full p-3 text-sm bg-gray-900 bg-opacity-50 md:opacity-0 lg:opacity-100 md:w-auto md:bg-transparent md:p-0 md:relative md:flex" :class="{'flex': showMenu, 'hidden': !showMenu }">
+<div class="flex-col items-center w-full h-full p-3 overflow-hidden bg-black bg-opacity-50 rounded-lg select-none md:p-0 backdrop-blur-lg md:h-auto md:bg-transparent md:rounded-none md:relative md:flex md:flex-row md:overflow-auto">
+<div class="flex flex-col items-center justify-end w-full h-full pt-2 md:w-full md:flex-row md:py-0"><a role="button" href="/changelog" class="btn lc-block button">
+<span id="brxe-kdbobv" class="inline-flex gap-1.5 justify-center items-center py-2 px-2 w-auto max-w-full text-base font-thin tracking-wide leading-tight text-center text-white normal-case bg-black rounded lc-block" style="outline: 0px; min-width: 150px; font-family: Inter;">
+CHANGELOG</span>
+</a></div>
+<div class=" border border-0 flex-col items-center w-full h-full p-3 overflow-hidden select-none md:p-0 backdrop-blur-lg md:h-auto md:bg-transparent md:rounded-sm md:relative md:flex md:flex-row md:overflow-auto lc-block cursor"><a role="button" href="/login" class="btn lc-block button">
+<span id="brxe-kdbobv" class="inline-flex gap-1.5 justify-center items-center py-2 px-2 w-auto max-w-full text-base font-thin border tracking-wide leading-tight text-center text-white normal-case bg-black rounded lc-block" style="outline: 0px; min-width: 150px; font-family: Inter;">
+LOGIN</span>
+</a></div>
+</div>
+</div>
+<div class="absolute right-0 z-50 flex flex-col items-end translate-y-1.5 w-10 h-10 p-2 mr-4 rounded-full cursor-pointer md:hidden hover:bg-gray-200/10 hover:bg-opacity-10 lc-block" :class="{ 'text-gray-400': showMenu, 'text-gray-100': !showMenu }">
+<svg class="w-6 h-6 lc-block" x-show="!showMenu" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" x-cloak="">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+<svg class="w-6 h-6 lc-block" x-show="showMenu" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" x-cloak="">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</div>
+</div>
+</nav>
+</div>
+</header>
+<div id="prose" class="lc-block max-w-96">
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white">
+<div class="flex justify-between px-4 mx-auto max-w-screen-xl">
+<article class="mx-auto w-full max-w-5xl format format-sm sm:format-base lg:format-lg format-blue">
+ <header class="mb-4 lg:mb-6 not-format">
+<address class="flex items-center mb-6 not-italic">
+<div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+<img alt="" src="https://secure.gravatar.com/avatar/a48446c7158d22ec774779af1ed350d9?s=64&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/a48446c7158d22ec774779af1ed350d9?s=128&amp;d=mm&amp;r=g 2x" class="avatar avatar-64 photo mr-4 w-16 h-16 rounded-full" height="64" width="64" decoding="async">
+<div>
+<a href="#" rel="author" class="text-xl font-bold text-gray-900">Daniel @Artisan</a>
+<p class="text-base font-light text-gray-500">Master of the Universe</p>
+<p class="text-base font-light text-gray-500">
+<time pubdate="" datetime="2023-07-19 15:12:41" title="2023-07-19 15:12:41">2023-07-19 | 15:12</time>
+</p>
+</div>
+</div>
+</address>
+<div class="my-8">
+<div id="soical_buttons" class="flex gap-2 justify-start items-center lc-block"><a class="flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button" role="button">
+<img src="https://dev.domartisan.com/wp-content/uploads/2023/07/YouTube-Original.png" class="w-6 h-6 lc-block mr-2 wp-image-701" width="48" height="48" alt="YouTube">
+<span class=" lc-block">Youtube</span>
+</a>
+<a class="flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button" role="button">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E" class="w-6 h-6 lc-block mr-2 wp-image-698 perfmatters-lazy" width="48" height="48" alt="Twitter" data-src="https://dev.domartisan.com/wp-content/uploads/2023/07/Twitter-Original.png"><noscript><img src="https://dev.domartisan.com/wp-content/uploads/2023/07/Twitter-Original.png" class="w-6 h-6 lc-block mr-2 wp-image-698" width="48" height="48" alt="Twitter"></noscript>
+<span class=" lc-block">Twitter</span>
+</a>
+<a class="flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button" role="button">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E" class="w-6 h-6 lc-block mr-2 wp-image-697 perfmatters-lazy" width="48" height="48" alt="LinkedIn" data-src="https://dev.domartisan.com/wp-content/uploads/2023/07/LinkedIn-Original.png"><noscript><img src="https://dev.domartisan.com/wp-content/uploads/2023/07/LinkedIn-Original.png" class="w-6 h-6 lc-block mr-2 wp-image-697" width="48" height="48" alt="LinkedIn"></noscript>
+<span class=" lc-block">LinkedIn</span>
+</a>
+<a class="flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button" role="button">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E" class="w-6 h-6 lc-block mr-2 wp-image-699 perfmatters-lazy" width="48" height="48" alt="Medium" data-src="https://dev.domartisan.com/wp-content/uploads/2023/07/Medium-Original.png"><noscript><img src="https://dev.domartisan.com/wp-content/uploads/2023/07/Medium-Original.png" class="w-6 h-6 lc-block mr-2 wp-image-699" width="48" height="48" alt="Medium"></noscript>
+<span class=" lc-block">Medium</span>
+</a>
+<a class="flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button" role="button">
+<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E" class="w-6 h-6 lc-block mr-2 wp-image-700 perfmatters-lazy" width="48" height="48" alt="Github" data-src="https://dev.domartisan.com/wp-content/uploads/2023/07/Github-Original.png"><noscript><img src="https://dev.domartisan.com/wp-content/uploads/2023/07/Github-Original.png" class="w-6 h-6 lc-block mr-2 wp-image-700" width="48" height="48" alt="Github"></noscript>
+<span class=" lc-block">Github</span>
+</a>
+</div>
+</div>
+<h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl">Building Apps With Sveltekit And Tailwind - Custom Setup</h1>
+</header>
+<content-block>
+<p>SvelteKit is a powerful and versatile framework built on top of <strong><a href="https://svelte.dev/">Svelte</a></strong>, a popular compiler that turns your declarative components into efficient JavaScript code. SvelteKit provides an excellent developer experience with features like server-side rendering (SSR), automatic code splitting, and built-in routing.</p>
+<p>Tailwind CSS is a utility-first CSS framework that allows you to build custom designs quickly and efficiently. Instead of writing CSS from scratch or dealing with pre-defined styles, you can use Tailwind's utility classes to create responsive and modern designs.</p>
+<p>In this article, we'll explore how to set up a custom SvelteKit project with Tailwind CSS and dive into various aspects of building an app with this powerful combination.</p>
+<h2 class="wp-block-heading"><strong>Setting Up a SvelteKit Project</strong></h2>
+<p>To get started with SvelteKit, you'll need to have Node.js and npm installed. You can download Node.js from <strong><a href="https://nodejs.org/en/download/">the official website</a></strong> and npm will be included with it.</p>
+<p>Once Node.js and npm are installed, you can create a new SvelteKit project by running the following command:</p>
+<pre class="wp-block-code"><code>
+npm init <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a4d7d2c1c8d0c1e4cac1dcd0">[email&nbsp;protected]</a> your-app-name
+
+</code></pre>
+<p>Replace <strong><code>your-app-name</code></strong> with the name of your project. This command will create a new SvelteKit project in a folder with the specified name. Navigate to the project folder by running:</p>
+<pre class="wp-block-code"><code>
+cd your-app-name
+
+</code></pre>
+<p>Now, install the project dependencies by running:</p>
+<pre class="wp-block-code"><code>
+npm install
+
+</code></pre>
+<p>This will install all the necessary dependencies for your SvelteKit project. You can start the development server by running:</p>
+<pre class="wp-block-code"><code>
+npm run dev
+
+</code></pre>
+<p>This will start the development server at <strong><code>http://localhost:3000</code></strong>. You can visit this URL to see your SvelteKit app in action.</p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+https://www.youtube.com/watch?v=YipaPr4Aex8
+</div></figure>
+<h2 class="wp-block-heading"><strong>Installing and Configuring Tailwind CSS</strong></h2>
+<p>To install Tailwind CSS, run the following command in your SvelteKit project directory:</p>
+<pre class="wp-block-code"><code>
+npm install tailwindcss
+
+</code></pre>
+<p>Next, create a configuration file for Tailwind CSS by running:</p>
+<pre class="wp-block-code"><code>
+npx tailwindcss init
+
+</code></pre>
+<p>This command will create a <strong><code>tailwind.config.js</code></strong> file in your project root. Open this file and add the following configuration:</p>
+<pre class="wp-block-code"><code>javascript
+module.exports = {
+  purge: ['./src/**/*.svelte'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+</code></pre>
+<p>This configuration tells Tailwind CSS to purge unused styles from your Svelte components in the <strong><code>src</code></strong> folder when building for production.</p>
+<p>Next, you need to configure your SvelteKit project to work with Tailwind CSS. Open the <strong><code>svelte.config.js</code></strong> file and add the following configuration:</p>
+<pre class="wp-block-code"><code>javascript
+import preprocess from 'svelte-preprocess';
+import adapter from '@sveltejs/adapter-static';
+
+export default {
+  kit: {
+    adapter: adapter(),
+    target: '#svelte',
+    vite: {
+      css: {
+        postcss: {
+          plugins: [require('tailwindcss')],
+        },
+      },
+    },
+  },
+  preprocess: preprocess(),
+};
+
+</code></pre>
+<p>This configuration tells SvelteKit to use Tailwind CSS as a PostCSS plugin.</p>
+<p>Finally, import Tailwind CSS into your SvelteKit project. Create a new file in the <strong><code>src</code></strong> folder called <strong><code>app.postcss</code></strong> and add the following:</p>
+<pre class="wp-block-code"><code>css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+</code></pre>
+<p>Then, in the <strong><code>src/routes/__layout.svelte</code></strong> file, add the following line to the <strong><code>&lt;head&gt;</code></strong> section:</p>
+<pre class="wp-block-code"><code>html
+&lt;link rel="stylesheet" href="/global.css" /&gt;
+
+</code></pre>
+<p>This line tells SvelteKit to include the global CSS file which includes your Tailwind CSS styles.</p>
+<h2 class="wp-block-heading">Customizing Your Tailwind CSS Configuration</h2>
+<p>Tailwind CSS comes with a default configuration, but you can customize it to fit your needs. Let's look at some common customization options:</p>
+<h3 class="wp-block-heading">Theme customization</h3>
+<p>The <code>theme</code> option in the <code>tailwind.config.js</code> file allows you to customize various aspects of your design. Here are some examples:</p>
+<pre class="wp-block-code"><code>module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#ff00ff',
+        secondary: {
+          100: '#ffffff',
+          200: '#cccccc',
+          300: '#999999',
+          400: '#666666',
+          500: '#333333',
+          600: '#000000',
+        },
+      },
+    },
+  },
+};
+</code></pre>
+<p>This configuration adds two new colors to your Tailwind CSS palette: <strong><code>primary</code></strong> and <strong><code>secondary</code></strong>. <strong><code>secondary</code></strong> is defined as an object with six shades of gray.</p>
+<h3 class="wp-block-heading">Typography</h3>
+<pre class="wp-block-code"><code>javascript
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Open Sans', 'Helvetica Neue', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
+      },
+      fontSize: {
+        '2xs': '.625rem', // 10px
+        '3xs': '.5rem', // 8px
+      },
+    },
+  },
+};
+
+</code></pre>
+<p>This configuration adds two new font families to your Tailwind CSS styles: <strong><code>sans</code></strong> and <strong><code>serif</code></strong>. It also adds two new font sizes: <strong><code>2xs</code></strong> and <strong><code>3xs</code></strong>.</p>
+<h3 class="wp-block-heading">Spacing</h3>
+<pre class="wp-block-code"><code>javascript
+module.exports = {
+  theme: {
+    extend: {
+      spacing: {
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+      },
+    },
+  },
+};
+
+</code></pre>
+<p>This configuration adds three new spacing options to your Tailwind CSS styles: <strong><code>72</code></strong>, <strong><code>84</code></strong>, and <strong><code>96</code></strong>.</p>
+<h3 class="wp-block-heading"><strong>Creating custom utility classes</strong></h3>
+<p>Tailwind CSS provides a comprehensive set of utility classes, but you can also create your own custom classes to fit your needs. Here's an example:</p>
+<pre class="wp-block-code"><code>javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#ff00ff',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      borderWidth: ['hover'],
+    },
+  },
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.border-primary': {
+          borderColor: '#ff00ff',
+        },
+      };
+      addUtilities(newUtilities, ['hover']);
+    },
+  ],
+};
+
+</code></pre>
+<p>This configuration adds a new utility class called <strong><code>.border-primary</code></strong> which sets the border color to <strong><code>#ff00ff</code></strong>. The <strong><code>variants</code></strong> option specifies that this class should only be applied on hover. The <strong><code>plugins</code></strong> option adds the new utility class to your Tailwind CSS styles.</p>
+<h3 class="wp-block-heading"><strong>Configuring variants for responsiveness and interactivity</strong></h3>
+<p>Tailwind CSS provides several variants that allow you to apply styles based on screen size or user interaction. Here are some examples:</p>
+<h3 class="wp-block-heading">Responsive variants</h3>
+<pre class="wp-block-code"><code>javascript
+module.exports = {
+  theme: {
+    extend: {
+      fontSize: {
+        sm: '0.875rem', // 14px
+        md: '1rem', // 16px
+        lg: '1.125rem', // 18px
+        xl: '1.25rem', // 20px
+      },
+    },
+  },
+  variants: {
+    extend: {
+      fontSize: ['responsive'],
+    },
+
+};
+</code></pre>
+<p>This configuration adds four new font sizes to your Tailwind CSS styles: <strong><code>sm</code></strong>, <strong><code>md</code></strong>, <strong><code>lg</code></strong>, and <strong><code>xl</code></strong>. The <strong><code>variants</code></strong> option specifies that these classes should be responsive, meaning they will apply different styles on different screen sizes.</p>
+<h3 class="wp-block-heading">Interactive variants</h3>
+<pre class="wp-block-code"><code>javascript
+module.exports = {
+  theme: {
+    extend: {
+      backgroundColor: {
+        primary: '#ff00ff',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['active'],
+    },
+  },
+};
+
+</code></pre>
+<p>This configuration adds a new color to your Tailwind CSS palette called <strong><code>primary</code></strong>. The <strong><code>variants</code></strong> option specifies that this color should be applied when an element is active (for example, when a button is clicked).</p>
+<h2 class="wp-block-heading"><strong>Conclusion</strong></h2>
+<p>SvelteKit and Tailwind CSS are powerful tools for building fast and responsive web applications. By customizing your setup and taking advantage of the features and optimizations available, you can create a high-quality user experience that is both performant and visually appealing.</p>
+<p>Remember to always follow best practices for web development, such as optimizing images and minimizing JavaScript and CSS files, to ensure that your application runs smoothly and efficiently.</p>
+<p>Happy coding!</p>
+<h2 class="wp-block-heading"><strong>Additional Resources</strong></h2>
+<ul>
+<li><strong><a href="https://kit.svelte.dev/docs">SvelteKit Documentation</a></strong></li>
+<li><strong><a href="https://tailwindcss.com/docs">Tailwind CSS Documentation</a></strong></li>
+<li><strong><a href="https://github.com/topics/sveltekit-tailwind-template">SvelteKit and Tailwind CSS Starter Template</a></strong></li>
+</ul>
+<h2 class="wp-block-heading"><strong>Frequently Asked Questions</strong></h2>
+<h3 class="wp-block-heading"><strong>Why use SvelteKit and Tailwind CSS together?</strong></h3>
+<p>SvelteKit and Tailwind CSS work together seamlessly to provide a powerful and efficient way to build web applications. SvelteKit provides a robust framework for building fast and scalable applications, while Tailwind CSS provides a comprehensive set of pre-defined classes for styling HTML elements. Together, they allow developers to build high-quality user interfaces that are both performant and visually appealing.</p>
+<h3 class="wp-block-heading"><strong>How do I customize my Tailwind CSS configuration?</strong></h3>
+<p>Tailwind CSS comes with a default configuration, but you can customize it to fit your needs. You can use the <strong><code>tailwind.config.js</code></strong> file to customize various aspects of your design, such as colors, typography, and spacing. You can also create custom utility classes and configure variants for responsiveness and interactivity.</p>
+<h3 class="wp-block-heading"><strong>Are there any starter templates available for SvelteKit and Tailwind CSS?</strong></h3>
+<p>Yes, there are several starter templates available that include SvelteKit and Tailwind CSS, such as the <strong><a href="https://github.com/topics/sveltekit-tailwind-template">SvelteKit and Tailwind CSS Starter Template</a></strong>. These templates provide a quick and easy way to get started with building web applications using SvelteKit and Tailwind CSS.</p>
+</content-block>
+</article>
+</div>
+</main>
+<div class="px-4 mx-auto max-w-screen-xl invert"><h2 class="mb-8 text-2xl font-bold text-slate-100">Related Articles</h2><div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4"><article class="max-w-xs flex flex-col gap-2"><h2 class="mb-2 text-xl font-bold leading-tight text-gray-50"><a href="/blog/google-lighthouse-score-how-to-improve-your-website-performance/">Google Lighthouse Score: How to Improve Your Website Performance</a></h2><p class="mb-4 font-light text-gray-500 ">Introduction In today’s digital landscape, a high-perf...</p><a href="/blog/google-lighthouse-score-how-to-improve-your-website-performance/" class="inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline">Read in 2 minutes</a></article><article class="max-w-xs flex flex-col gap-2"><h2 class="mb-2 text-xl font-bold leading-tight text-gray-50"><a href="/blog/how-to-add-tailwind-css-to-wordpress-complete-guide/">How To Add Tailwind CSS to WordPress: Complete Guide</a></h2><p class="mb-4 font-light text-gray-500 ">Introduction Tailwind CSS is a utility-first CSS framework f...</p><a href="/blog/how-to-add-tailwind-css-to-wordpress-complete-guide/" class="inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline">Read in 2 minutes</a></article><article class="max-w-xs flex flex-col gap-2"><h2 class="mb-2 text-xl font-bold leading-tight text-gray-50"><a href="/blog/gutenberg-or-page-builder-things-to-consider-when-making-wordpress-websites/">Gutenberg or Page Builder? Things To Consider When Making WordPress Websites</a></h2><p class="mb-4 font-light text-gray-500 ">Introduction Choosing the right editor for your WordPress pr...</p><a href="/blog/gutenberg-or-page-builder-things-to-consider-when-making-wordpress-websites/" class="inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline">Read in 2 minutes</a></article><article class="max-w-xs flex flex-col gap-2"><h2 class="mb-2 text-xl font-bold leading-tight text-gray-50"><a href="/blog/top-5-mistakes-to-avoid-with-wordpress-page-builders/">Top 5 Mistakes to Avoid with WordPress Page Builders</a></h2><p class="mb-4 font-light text-gray-500 ">Introduction WordPress page builders have become increasingl...</p><a href="/blog/top-5-mistakes-to-avoid-with-wordpress-page-builders/" class="inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline">Read in 2 minutes</a></article></div></div>
+</div>
+<section>
+<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 lc-block grayscale">
+<div class="gap-16 justify-between items-center p-6 text-white bg-gray-900 rounded-lg dark:bg-gray-800 lg:flex lg:gap-24 md:p-12 lc-block">
+<div class="w-full lc-block">
+<h2 class="mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl lc-block">Sign up for our newsletter</h2>
+<p class="font-light text-gray-400 sm:text-xl lc-block">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.</p>
+</div>
+<div class="mt-6 w-full lg:mt-0 lc-block">
+<form action="#">
+<div class="items-center mb-3 space-y-4 sm:flex sm:space-y-0 lc-block">
+<div class="relative w-full lc-block">
+<label for="member_email" class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Email address</label>
+<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none lc-block">
+<svg class="w-5 h-5 text-gray-500 dark:text-gray-400 lc-block" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+<path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+</svg>
+</div>
+<input class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Enter your email" type="email" required="">
+</div>
+<div class=" lc-block">
+<button type="submit" class="py-3 px-5 w-full text-sm font-medium text-center text-black rounded-lg border border-[.08rem] border-slate-100 cursor-pointer bg-slate-100 border-primary-600 hover:border-primary-700 sm:rounded-none sm:rounded-r-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lc-block button" role="button">Subscribe</button>
+</div>
+</div>
+<div class="text-sm text-left text-gray-400 dark:text-gray-300 lc-block">We care about the protection of your data. <a href="#" class="font-medium text-white hover:underline lc-block button" role="button">Read our Privacy Policy</a>.</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<footer class="flex bg-white flex-col items-center justify-center grayscale isolate mt-8 px-6 sm:mt-12 lg:px-8 lc-block">
+<div class="mx-auto max-w-7xl text-center lc-block">
+<h2 class="text-3xl font-bold leading-none tracking-tight text-slate-950 font-black sm:text-7xl lc-block">Whatever Your Site Needs,<br>Artisan Can Help.&nbsp;</h2>
+<p class="mx-auto mt-6 max-w-2xl text-2xl leading-8 text-slate-600 lc-block">Boost your site's performance, security, and scalability with the Artisan platform. Looking for custom work? Contact us below.&nbsp;</p>
+<div class="mt-10 flex items-center justify-center gap-x-6 lc-block"><a role="button" class="btn lc-block button"><span id="brxe-kdbobv" class="inline-flex gap-1.5 justify-center items-center py-3 px-4 w-auto max-w-full text-base font-thiCK tracking-wide leading-tight text-center text-white normal-case bg-black rounded lc-block"><svg class="block h-5 font-medium leading-5 text-white align-middle lc-block" xmlns="http://www.w3.org/2000/svg" width="18" height="23" viewBox="0 0 18 23" fill="none">
+<path d="M8.49088 21.6118C8.26982 21.3486 7.97858 21.0082 7.84875 20.8503C7.71542 20.6924 7.57155 20.5205 7.52243 20.4679C7.36453 20.2889 6.89433 19.7205 6.58555 19.3415C6.41712 19.1345 6.23817 18.9204 6.18904 18.8643C6.11887 18.7871 5.09778 17.4888 4.8311 17.1414C4.59951 16.8397 4.05563 16.1028 3.1749 14.8957C2.9784 14.6255 2.62049 14.1553 2.17135 13.5799C2.00643 13.3694 1.73976 13.022 1.57484 12.8079C1.41343 12.5974 0.992363 12.0535 0.641473 11.6044C0.00636167 10.7938 -0.0743428 10.6605 0.0484687 10.5903C0.0765399 10.5763 0.17479 10.4675 0.26953 10.3517C0.444975 10.1306 0.676562 9.85343 0.946747 9.54465C1.21342 9.23938 2.13977 8.13758 2.63102 7.54458C3.24508 6.80069 3.50474 6.49191 3.83808 6.10944C4.18546 5.70942 4.20651 5.68135 4.52582 5.29888C4.66969 5.12694 4.82057 4.94448 4.86268 4.89536C4.90479 4.84623 5.18199 4.5164 5.47674 4.162C6.12237 3.39004 6.11185 3.40057 6.9996 2.3479C7.79612 1.404 7.97156 1.19347 8.50141 0.540812C8.71194 0.284663 8.91195 0.0530759 8.95055 0.0250047C9.04178 -0.0381555 9.0909 0.000441986 9.37161 0.351332C9.74707 0.814507 10.2664 1.4426 10.7331 1.99701C11.1998 2.5479 11.5857 3.01459 12.3331 3.93392C12.5823 4.23919 12.7963 4.49885 12.8068 4.50938C12.8174 4.51991 12.9893 4.72693 13.1823 4.96904C13.3788 5.21116 13.5577 5.43222 13.5858 5.46029C13.6139 5.48836 13.7928 5.70942 13.9893 5.95154C14.1858 6.19365 14.3648 6.41471 14.3929 6.44278C14.4174 6.47085 14.5367 6.61121 14.656 6.75507C14.8841 7.03579 15.3894 7.6323 15.8245 8.14109C15.9683 8.30952 16.1754 8.55514 16.2806 8.68497C16.3859 8.8148 16.7122 9.19376 17 9.53061C17.7509 10.4008 18 10.7061 18 10.7587C18 10.7938 17.6245 11.2816 17.5438 11.3517C17.4982 11.3903 16.6596 12.3763 16.2175 12.9097C15.7157 13.5132 15.3438 13.9553 15.0876 14.2466C14.9999 14.3448 14.8595 14.5097 14.7718 14.615C14.4455 15.008 14.4385 15.0115 14.3472 14.987C14.3016 14.9764 14.2174 14.9027 14.1578 14.8291C14.0244 14.6606 13.656 14.2325 13.4419 14.001C13.2068 13.7483 12.6349 13.0921 12.5788 13.0114C12.5366 12.9483 12.5507 12.9202 12.7296 12.6992C12.9402 12.443 13.0595 12.3062 13.3507 11.9833C13.7893 11.5026 13.8244 11.457 13.8244 11.3658C13.8244 11.25 13.6981 10.7307 13.6069 10.457C13.2244 9.34113 12.3963 8.09898 10.9296 6.45682C10.5225 6.00066 9.61373 4.83922 9.17512 4.21814C9.09792 4.10936 9.0102 4.01813 8.97862 4.01813C8.92949 4.01813 8.79616 4.162 8.66633 4.35499C8.63826 4.39709 8.44877 4.64973 8.24526 4.91641C7.91893 5.348 7.08732 6.49892 6.63818 7.14105C5.87324 8.2253 5.3048 9.2113 5.04865 9.88501C4.989 10.0464 4.92935 10.2008 4.91531 10.2289C4.89777 10.257 4.86619 10.3692 4.84163 10.4745C4.82057 10.5798 4.78548 10.6921 4.77145 10.7236C4.7539 10.7552 4.72232 10.9622 4.69776 11.1868C4.66267 11.5131 4.66267 11.6675 4.69776 11.9904C4.72232 12.2079 4.7539 12.4044 4.76794 12.4219C4.78548 12.443 4.81706 12.5377 4.84163 12.6325C4.90128 12.8465 5.09427 13.2395 5.25568 13.4746C5.55042 13.8957 5.8557 14.215 7.10487 15.4045C7.45225 15.7343 8.00665 16.2747 8.34351 16.6081C8.67685 16.9379 8.96458 17.2116 8.98213 17.2116C9.0102 17.2116 9.7576 16.3765 10.1471 15.9063C10.2418 15.794 10.3366 15.7028 10.3611 15.7028C10.3997 15.7028 10.4594 15.7659 10.8173 16.173C11.0945 16.4923 11.9717 17.4713 12.0173 17.5099C12.084 17.5695 12.3401 17.8923 12.3787 17.9695C12.4279 18.0643 12.4349 18.0537 11.6138 19.0187C11.2559 19.4397 10.8804 19.8889 10.7787 20.0152C10.6734 20.1415 10.5787 20.2538 10.5646 20.2643C10.5541 20.2749 10.3997 20.4538 10.2278 20.6608C10.0523 20.8714 9.84181 21.1275 9.75409 21.2293C9.66636 21.331 9.49443 21.5381 9.37161 21.6925C9.10845 22.0153 9.02774 22.089 8.95055 22.089C8.91897 22.0855 8.71194 21.8714 8.49088 21.6118Z" fill="white" class="tracking-wide"></path>
+</svg>LINK YOUR SITE</span></a></div>
+<footer class="bg-white">
+<div class="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lc-block">
+<nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
+<div class="pb-6 lc-block">
+<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button" role="button">Account</a>
+</div>
+<div class="pb-6 lc-block">
+<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button" role="button">Blog</a>
+</div>
+<div class="pb-6 lc-block">
+<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button" role="button">Careers</a>
+</div>
+<div class="pb-6 lc-block">
+<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button" role="button">Agencies</a>
+</div>
+<div class="pb-6 lc-block">
+<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button" role="button">Partners</a>
+</div>
+<div class="pb-6 lc-block">
+<a href="#" class="text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button" role="button">Privacy Policy</a>
+</div>
+</nav>
+<div class="mt-10 flex justify-center space-x-10 lc-block">
+<a href="#" class="text-gray-400 hover:text-gray-500 lc-block button" role="button">
+<span class="sr-only lc-block">Facebook</span>
+<svg class="h-6 w-6 lc-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+</svg>
+</a>
+<a href="#" class="text-gray-400 hover:text-gray-500 lc-block button" role="button">
+<span class="sr-only lc-block">Instagram</span>
+<svg class="h-6 w-6 lc-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+</svg>
+</a>
+<a href="#" class="text-gray-400 hover:text-gray-500 lc-block button" role="button">
+<span class="sr-only lc-block">Twitter</span>
+<svg class="h-6 w-6 lc-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a href="#" class="text-gray-400 hover:text-gray-500 lc-block button" role="button">
+<span class="sr-only lc-block">GitHub</span>
+<svg class="h-6 w-6 lc-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+</svg>
+</a>
+<a href="#" class="text-gray-400 hover:text-gray-500 lc-block button" role="button">
+<span class="sr-only lc-block">YouTube</span>
+<svg class="h-6 w-6 lc-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+<path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+<p class="mt-10 text-center text-xs leading-5 text-gray-500 lc-block">© 2023 Artisan Studios, Inc. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</footer>
+<!-- HTML_TAG_END -->
+
+
+			
+			<script>
+				{
+					__sveltekit_1pl0a8p = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,{"type":"data","data":{props:{bodyContent:"\n\u003Cheader class=\"grayscale\">\n\u003Cdiv class=\"mx-auto max-w-7xl lc-block invert\">\n\u003Cnav class=\"flex items-center w-full h-24 select-none\" x-data=\"{ showMenu: false }\">\n\u003Cdiv class=\"relative flex flex-wrap items-start justify-between w-full mx-auto font-medium md:items-center md:h-24 md:justify-between lc-block\">\u003Ca href=\"/\" class=\"flex items-center w-1/4 py-4 pl-6 pr-4 space-x-2 font-extrabold text-white md:py-0 lc-block button\" role=\"button\">\u003Cimg src=\"https://artisan-dev.blockartisan.com/wp-content/uploads/2023/07/White-Icon.svg\" class=\"w-auto h-6 -translate-y-px wp-image-166 lc-highlight-currently-editing\" width=\"\" height=\"185\" srcset=\"\" sizes=\"\" alt=\"\">\n\u003Cspan class=\"text-2xl font-semibold lc-block\">Artisan\u003C/span>\u003C/a>\n\u003Cdiv :class=\"{'flex': showMenu, 'hidden md:flex': !showMenu }\" class=\"absolute z-50 flex-col items-center justify-center w-full h-auto px-2 text-center border text-gray-400 -translate-x-1/2 border-0 border-gray-100 rounded-md md:border md:w-auto md:h-10 left-1/2 md:flex-row md:items-center lc-block\">\n\u003Ca href=\"/#performance\" class=\"relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center text-white md:py-2 group md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button\" role=\"button\">\u003Cspan class=\" lc-block\">Performance\u003C/span>\n\u003Cspan class=\"absolute bottom-0 left-0 w-full h-px duration-300 ease-out translate-y-px bg-gradient-to-r md:from-transparent md:via-gray-700 md:to-gray-100 from-transparent via-gray-600 to-gray-900 lc-block\">\u003C/span>\u003C/a>\n\u003Ca href=\"/#features\" class=\"relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button\" role=\"button\">\n\u003Cspan class=\" lc-block\">Security\u003C/span>\n\u003Cspan class=\"absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block\">\u003C/span>\n\u003C/a>\n\u003Ca href=\"/#teams\" class=\"relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button\" role=\"button\">\n\u003Cspan class=\" lc-block\">Teams\u003C/span>\n\u003Cspan class=\"absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block\">\u003C/span>\n\u003C/a>\n\u003Ca href=\"/blog\" class=\"relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button\" role=\"button\">\n\u003Cspan class=\" lc-block\">Blog\u003C/span>\n\u003Cspan class=\"absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block\">\u003C/span>\n\u003C/a>\n\u003Ca href=\"/contact\" class=\"relative inline-block w-full h-full px-4 py-5 mx-2 font-medium leading-tight text-center duration-300 ease-out md:py-2 group hover:text-white md:w-auto md:px-2 lg:mx-3 md:text-center lc-block button\" role=\"button\">\n\u003Cspan class=\" lc-block\">Contact\u003C/span>\n\u003Cspan class=\"absolute bottom-0 w-0 h-px duration-300 ease-out translate-y-px group-hover:left-0 left-1/2 group-hover:w-full bg-gradient-to-r md:from-gray-700 md:via-gray-400 md:to-gray-700 from-gray-900 via-gray-600 to-gray-900 lc-block\">\u003C/span>\n\u003C/a>\n\u003C/div>\n\u003Cdiv class=\"fixed top-0 left-0 z-40 items-center w-full h-full p-3 text-sm bg-gray-900 bg-opacity-50 md:opacity-0 lg:opacity-100 md:w-auto md:bg-transparent md:p-0 md:relative md:flex\" :class=\"{'flex': showMenu, 'hidden': !showMenu }\">\n\u003Cdiv class=\"flex-col items-center w-full h-full p-3 overflow-hidden bg-black bg-opacity-50 rounded-lg select-none md:p-0 backdrop-blur-lg md:h-auto md:bg-transparent md:rounded-none md:relative md:flex md:flex-row md:overflow-auto\">\n\u003Cdiv class=\"flex flex-col items-center justify-end w-full h-full pt-2 md:w-full md:flex-row md:py-0\">\u003Ca role=\"button\" href=\"/changelog\" class=\"btn lc-block button\">\n\u003Cspan id=\"brxe-kdbobv\" class=\"inline-flex gap-1.5 justify-center items-center py-2 px-2 w-auto max-w-full text-base font-thin tracking-wide leading-tight text-center text-white normal-case bg-black rounded lc-block\" style=\"outline: 0px; min-width: 150px; font-family: Inter;\">\nCHANGELOG\u003C/span>\n\u003C/a>\u003C/div>\n\u003Cdiv class=\" border border-0 flex-col items-center w-full h-full p-3 overflow-hidden select-none md:p-0 backdrop-blur-lg md:h-auto md:bg-transparent md:rounded-sm md:relative md:flex md:flex-row md:overflow-auto lc-block cursor\">\u003Ca role=\"button\" href=\"/login\" class=\"btn lc-block button\">\n\u003Cspan id=\"brxe-kdbobv\" class=\"inline-flex gap-1.5 justify-center items-center py-2 px-2 w-auto max-w-full text-base font-thin border tracking-wide leading-tight text-center text-white normal-case bg-black rounded lc-block\" style=\"outline: 0px; min-width: 150px; font-family: Inter;\">\nLOGIN\u003C/span>\n\u003C/a>\u003C/div>\n\u003C/div>\n\u003C/div>\n\u003Cdiv class=\"absolute right-0 z-50 flex flex-col items-end translate-y-1.5 w-10 h-10 p-2 mr-4 rounded-full cursor-pointer md:hidden hover:bg-gray-200/10 hover:bg-opacity-10 lc-block\" :class=\"{ 'text-gray-400': showMenu, 'text-gray-100': !showMenu }\">\n\u003Csvg class=\"w-6 h-6 lc-block\" x-show=\"!showMenu\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" x-cloak=\"\">\n\u003Cpath d=\"M4 6h16M4 12h16M4 18h16\">\u003C/path>\n\u003C/svg>\n\u003Csvg class=\"w-6 h-6 lc-block\" x-show=\"showMenu\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" x-cloak=\"\">\n\u003Cpath stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\">\u003C/path>\n\u003C/svg>\n\u003C/div>\n\u003C/div>\n\u003C/nav>\n\u003C/div>\n\u003C/header>\n\u003Cdiv id=\"prose\" class=\"lc-block max-w-96\">\n\u003Cmain class=\"pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white\">\n\u003Cdiv class=\"flex justify-between px-4 mx-auto max-w-screen-xl\">\n\u003Carticle class=\"mx-auto w-full max-w-5xl format format-sm sm:format-base lg:format-lg format-blue\">\n \u003Cheader class=\"mb-4 lg:mb-6 not-format\">\n\u003Caddress class=\"flex items-center mb-6 not-italic\">\n\u003Cdiv class=\"inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white\">\n\u003Cimg alt=\"\" src=\"https://secure.gravatar.com/avatar/a48446c7158d22ec774779af1ed350d9?s=64&amp;d=mm&amp;r=g\" srcset=\"https://secure.gravatar.com/avatar/a48446c7158d22ec774779af1ed350d9?s=128&amp;d=mm&amp;r=g 2x\" class=\"avatar avatar-64 photo mr-4 w-16 h-16 rounded-full\" height=\"64\" width=\"64\" decoding=\"async\">\n\u003Cdiv>\n\u003Ca href=\"#\" rel=\"author\" class=\"text-xl font-bold text-gray-900\">Daniel @Artisan\u003C/a>\n\u003Cp class=\"text-base font-light text-gray-500\">Master of the Universe\u003C/p>\n\u003Cp class=\"text-base font-light text-gray-500\">\n\u003Ctime pubdate=\"\" datetime=\"2023-07-19 15:12:41\" title=\"2023-07-19 15:12:41\">2023-07-19 | 15:12\u003C/time>\n\u003C/p>\n\u003C/div>\n\u003C/div>\n\u003C/address>\n\u003Cdiv class=\"my-8\">\n\u003Cdiv id=\"soical_buttons\" class=\"flex gap-2 justify-start items-center lc-block\">\u003Ca class=\"flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button\" role=\"button\">\n\u003Cimg src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/YouTube-Original.png\" class=\"w-6 h-6 lc-block mr-2 wp-image-701\" width=\"48\" height=\"48\" alt=\"YouTube\">\n\u003Cspan class=\" lc-block\">Youtube\u003C/span>\n\u003C/a>\n\u003Ca class=\"flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button\" role=\"button\">\n\u003Cimg src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E\" class=\"w-6 h-6 lc-block mr-2 wp-image-698 perfmatters-lazy\" width=\"48\" height=\"48\" alt=\"Twitter\" data-src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/Twitter-Original.png\">\u003Cnoscript>\u003Cimg src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/Twitter-Original.png\" class=\"w-6 h-6 lc-block mr-2 wp-image-698\" width=\"48\" height=\"48\" alt=\"Twitter\">\u003C/noscript>\n\u003Cspan class=\" lc-block\">Twitter\u003C/span>\n\u003C/a>\n\u003Ca class=\"flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button\" role=\"button\">\n\u003Cimg src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E\" class=\"w-6 h-6 lc-block mr-2 wp-image-697 perfmatters-lazy\" width=\"48\" height=\"48\" alt=\"LinkedIn\" data-src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/LinkedIn-Original.png\">\u003Cnoscript>\u003Cimg src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/LinkedIn-Original.png\" class=\"w-6 h-6 lc-block mr-2 wp-image-697\" width=\"48\" height=\"48\" alt=\"LinkedIn\">\u003C/noscript>\n\u003Cspan class=\" lc-block\">LinkedIn\u003C/span>\n\u003C/a>\n\u003Ca class=\"flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button\" role=\"button\">\n\u003Cimg src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E\" class=\"w-6 h-6 lc-block mr-2 wp-image-699 perfmatters-lazy\" width=\"48\" height=\"48\" alt=\"Medium\" data-src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/Medium-Original.png\">\u003Cnoscript>\u003Cimg src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/Medium-Original.png\" class=\"w-6 h-6 lc-block mr-2 wp-image-699\" width=\"48\" height=\"48\" alt=\"Medium\">\u003C/noscript>\n\u003Cspan class=\" lc-block\">Medium\u003C/span>\n\u003C/a>\n\u003Ca class=\"flex justify-center items-center py-1 px-4 text-sm font-medium leading-5 text-center text-gray-600 rounded-md hover:bg-slate-100  border border-gray-200 border-solid cursor-pointer lc-block button\" role=\"button\">\n\u003Cimg src=\"data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='48'%20height='48'%20viewBox='0%200%2048%2048'%3E%3C/svg%3E\" class=\"w-6 h-6 lc-block mr-2 wp-image-700 perfmatters-lazy\" width=\"48\" height=\"48\" alt=\"Github\" data-src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/Github-Original.png\">\u003Cnoscript>\u003Cimg src=\"https://dev.domartisan.com/wp-content/uploads/2023/07/Github-Original.png\" class=\"w-6 h-6 lc-block mr-2 wp-image-700\" width=\"48\" height=\"48\" alt=\"Github\">\u003C/noscript>\n\u003Cspan class=\" lc-block\">Github\u003C/span>\n\u003C/a>\n\u003C/div>\n\u003C/div>\n\u003Ch1 class=\"mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl\">Building Apps With Sveltekit And Tailwind - Custom Setup\u003C/h1>\n\u003C/header>\n\u003Ccontent-block>\n\u003Cp>SvelteKit is a powerful and versatile framework built on top of \u003Cstrong>\u003Ca href=\"https://svelte.dev/\">Svelte\u003C/a>\u003C/strong>, a popular compiler that turns your declarative components into efficient JavaScript code. SvelteKit provides an excellent developer experience with features like server-side rendering (SSR), automatic code splitting, and built-in routing.\u003C/p>\n\u003Cp>Tailwind CSS is a utility-first CSS framework that allows you to build custom designs quickly and efficiently. Instead of writing CSS from scratch or dealing with pre-defined styles, you can use Tailwind's utility classes to create responsive and modern designs.\u003C/p>\n\u003Cp>In this article, we'll explore how to set up a custom SvelteKit project with Tailwind CSS and dive into various aspects of building an app with this powerful combination.\u003C/p>\n\u003Ch2 class=\"wp-block-heading\">\u003Cstrong>Setting Up a SvelteKit Project\u003C/strong>\u003C/h2>\n\u003Cp>To get started with SvelteKit, you'll need to have Node.js and npm installed. You can download Node.js from \u003Cstrong>\u003Ca href=\"https://nodejs.org/en/download/\">the official website\u003C/a>\u003C/strong> and npm will be included with it.\u003C/p>\n\u003Cp>Once Node.js and npm are installed, you can create a new SvelteKit project by running the following command:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>\nnpm init \u003Ca href=\"/cdn-cgi/l/email-protection\" class=\"__cf_email__\" data-cfemail=\"a4d7d2c1c8d0c1e4cac1dcd0\">[email&nbsp;protected]\u003C/a> your-app-name\n\n\u003C/code>\u003C/pre>\n\u003Cp>Replace \u003Cstrong>\u003Ccode>your-app-name\u003C/code>\u003C/strong> with the name of your project. This command will create a new SvelteKit project in a folder with the specified name. Navigate to the project folder by running:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>\ncd your-app-name\n\n\u003C/code>\u003C/pre>\n\u003Cp>Now, install the project dependencies by running:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>\nnpm install\n\n\u003C/code>\u003C/pre>\n\u003Cp>This will install all the necessary dependencies for your SvelteKit project. You can start the development server by running:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>\nnpm run dev\n\n\u003C/code>\u003C/pre>\n\u003Cp>This will start the development server at \u003Cstrong>\u003Ccode>http://localhost:3000\u003C/code>\u003C/strong>. You can visit this URL to see your SvelteKit app in action.\u003C/p>\n\u003Cfigure class=\"wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio\">\u003Cdiv class=\"wp-block-embed__wrapper\">\nhttps://www.youtube.com/watch?v=YipaPr4Aex8\n\u003C/div>\u003C/figure>\n\u003Ch2 class=\"wp-block-heading\">\u003Cstrong>Installing and Configuring Tailwind CSS\u003C/strong>\u003C/h2>\n\u003Cp>To install Tailwind CSS, run the following command in your SvelteKit project directory:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>\nnpm install tailwindcss\n\n\u003C/code>\u003C/pre>\n\u003Cp>Next, create a configuration file for Tailwind CSS by running:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>\nnpx tailwindcss init\n\n\u003C/code>\u003C/pre>\n\u003Cp>This command will create a \u003Cstrong>\u003Ccode>tailwind.config.js\u003C/code>\u003C/strong> file in your project root. Open this file and add the following configuration:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>javascript\nmodule.exports = {\n  purge: ['./src/**/*.svelte'],\n  darkMode: false, // or 'media' or 'class'\n  theme: {\n    extend: {},\n  },\n  variants: {\n    extend: {},\n  },\n  plugins: [],\n}\n\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration tells Tailwind CSS to purge unused styles from your Svelte components in the \u003Cstrong>\u003Ccode>src\u003C/code>\u003C/strong> folder when building for production.\u003C/p>\n\u003Cp>Next, you need to configure your SvelteKit project to work with Tailwind CSS. Open the \u003Cstrong>\u003Ccode>svelte.config.js\u003C/code>\u003C/strong> file and add the following configuration:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>javascript\nimport preprocess from 'svelte-preprocess';\nimport adapter from '@sveltejs/adapter-static';\n\nexport default {\n  kit: {\n    adapter: adapter(),\n    target: '#svelte',\n    vite: {\n      css: {\n        postcss: {\n          plugins: [require('tailwindcss')],\n        },\n      },\n    },\n  },\n  preprocess: preprocess(),\n};\n\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration tells SvelteKit to use Tailwind CSS as a PostCSS plugin.\u003C/p>\n\u003Cp>Finally, import Tailwind CSS into your SvelteKit project. Create a new file in the \u003Cstrong>\u003Ccode>src\u003C/code>\u003C/strong> folder called \u003Cstrong>\u003Ccode>app.postcss\u003C/code>\u003C/strong> and add the following:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>css\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n\u003C/code>\u003C/pre>\n\u003Cp>Then, in the \u003Cstrong>\u003Ccode>src/routes/__layout.svelte\u003C/code>\u003C/strong> file, add the following line to the \u003Cstrong>\u003Ccode>&lt;head&gt;\u003C/code>\u003C/strong> section:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>html\n&lt;link rel=\"stylesheet\" href=\"/global.css\" /&gt;\n\n\u003C/code>\u003C/pre>\n\u003Cp>This line tells SvelteKit to include the global CSS file which includes your Tailwind CSS styles.\u003C/p>\n\u003Ch2 class=\"wp-block-heading\">Customizing Your Tailwind CSS Configuration\u003C/h2>\n\u003Cp>Tailwind CSS comes with a default configuration, but you can customize it to fit your needs. Let's look at some common customization options:\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">Theme customization\u003C/h3>\n\u003Cp>The \u003Ccode>theme\u003C/code> option in the \u003Ccode>tailwind.config.js\u003C/code> file allows you to customize various aspects of your design. Here are some examples:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>module.exports = {\n  theme: {\n    extend: {\n      colors: {\n        primary: '#ff00ff',\n        secondary: {\n          100: '#ffffff',\n          200: '#cccccc',\n          300: '#999999',\n          400: '#666666',\n          500: '#333333',\n          600: '#000000',\n        },\n      },\n    },\n  },\n};\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration adds two new colors to your Tailwind CSS palette: \u003Cstrong>\u003Ccode>primary\u003C/code>\u003C/strong> and \u003Cstrong>\u003Ccode>secondary\u003C/code>\u003C/strong>. \u003Cstrong>\u003Ccode>secondary\u003C/code>\u003C/strong> is defined as an object with six shades of gray.\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">Typography\u003C/h3>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      fontFamily: {\n        sans: ['Open Sans', 'Helvetica Neue', 'sans-serif'],\n        serif: ['Georgia', 'serif'],\n      },\n      fontSize: {\n        '2xs': '.625rem', // 10px\n        '3xs': '.5rem', // 8px\n      },\n    },\n  },\n};\n\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration adds two new font families to your Tailwind CSS styles: \u003Cstrong>\u003Ccode>sans\u003C/code>\u003C/strong> and \u003Cstrong>\u003Ccode>serif\u003C/code>\u003C/strong>. It also adds two new font sizes: \u003Cstrong>\u003Ccode>2xs\u003C/code>\u003C/strong> and \u003Cstrong>\u003Ccode>3xs\u003C/code>\u003C/strong>.\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">Spacing\u003C/h3>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      spacing: {\n        '72': '18rem',\n        '84': '21rem',\n        '96': '24rem',\n      },\n    },\n  },\n};\n\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration adds three new spacing options to your Tailwind CSS styles: \u003Cstrong>\u003Ccode>72\u003C/code>\u003C/strong>, \u003Cstrong>\u003Ccode>84\u003C/code>\u003C/strong>, and \u003Cstrong>\u003Ccode>96\u003C/code>\u003C/strong>.\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">\u003Cstrong>Creating custom utility classes\u003C/strong>\u003C/h3>\n\u003Cp>Tailwind CSS provides a comprehensive set of utility classes, but you can also create your own custom classes to fit your needs. Here's an example:\u003C/p>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      colors: {\n        primary: '#ff00ff',\n      },\n    },\n  },\n  variants: {\n    extend: {\n      borderWidth: ['hover'],\n    },\n  },\n  plugins: [\n    function ({ addUtilities }) {\n      const newUtilities = {\n        '.border-primary': {\n          borderColor: '#ff00ff',\n        },\n      };\n      addUtilities(newUtilities, ['hover']);\n    },\n  ],\n};\n\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration adds a new utility class called \u003Cstrong>\u003Ccode>.border-primary\u003C/code>\u003C/strong> which sets the border color to \u003Cstrong>\u003Ccode>#ff00ff\u003C/code>\u003C/strong>. The \u003Cstrong>\u003Ccode>variants\u003C/code>\u003C/strong> option specifies that this class should only be applied on hover. The \u003Cstrong>\u003Ccode>plugins\u003C/code>\u003C/strong> option adds the new utility class to your Tailwind CSS styles.\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">\u003Cstrong>Configuring variants for responsiveness and interactivity\u003C/strong>\u003C/h3>\n\u003Cp>Tailwind CSS provides several variants that allow you to apply styles based on screen size or user interaction. Here are some examples:\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">Responsive variants\u003C/h3>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      fontSize: {\n        sm: '0.875rem', // 14px\n        md: '1rem', // 16px\n        lg: '1.125rem', // 18px\n        xl: '1.25rem', // 20px\n      },\n    },\n  },\n  variants: {\n    extend: {\n      fontSize: ['responsive'],\n    },\n\n};\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration adds four new font sizes to your Tailwind CSS styles: \u003Cstrong>\u003Ccode>sm\u003C/code>\u003C/strong>, \u003Cstrong>\u003Ccode>md\u003C/code>\u003C/strong>, \u003Cstrong>\u003Ccode>lg\u003C/code>\u003C/strong>, and \u003Cstrong>\u003Ccode>xl\u003C/code>\u003C/strong>. The \u003Cstrong>\u003Ccode>variants\u003C/code>\u003C/strong> option specifies that these classes should be responsive, meaning they will apply different styles on different screen sizes.\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">Interactive variants\u003C/h3>\n\u003Cpre class=\"wp-block-code\">\u003Ccode>javascript\nmodule.exports = {\n  theme: {\n    extend: {\n      backgroundColor: {\n        primary: '#ff00ff',\n      },\n    },\n  },\n  variants: {\n    extend: {\n      backgroundColor: ['active'],\n    },\n  },\n};\n\n\u003C/code>\u003C/pre>\n\u003Cp>This configuration adds a new color to your Tailwind CSS palette called \u003Cstrong>\u003Ccode>primary\u003C/code>\u003C/strong>. The \u003Cstrong>\u003Ccode>variants\u003C/code>\u003C/strong> option specifies that this color should be applied when an element is active (for example, when a button is clicked).\u003C/p>\n\u003Ch2 class=\"wp-block-heading\">\u003Cstrong>Conclusion\u003C/strong>\u003C/h2>\n\u003Cp>SvelteKit and Tailwind CSS are powerful tools for building fast and responsive web applications. By customizing your setup and taking advantage of the features and optimizations available, you can create a high-quality user experience that is both performant and visually appealing.\u003C/p>\n\u003Cp>Remember to always follow best practices for web development, such as optimizing images and minimizing JavaScript and CSS files, to ensure that your application runs smoothly and efficiently.\u003C/p>\n\u003Cp>Happy coding!\u003C/p>\n\u003Ch2 class=\"wp-block-heading\">\u003Cstrong>Additional Resources\u003C/strong>\u003C/h2>\n\u003Cul>\n\u003Cli>\u003Cstrong>\u003Ca href=\"https://kit.svelte.dev/docs\">SvelteKit Documentation\u003C/a>\u003C/strong>\u003C/li>\n\u003Cli>\u003Cstrong>\u003Ca href=\"https://tailwindcss.com/docs\">Tailwind CSS Documentation\u003C/a>\u003C/strong>\u003C/li>\n\u003Cli>\u003Cstrong>\u003Ca href=\"https://github.com/topics/sveltekit-tailwind-template\">SvelteKit and Tailwind CSS Starter Template\u003C/a>\u003C/strong>\u003C/li>\n\u003C/ul>\n\u003Ch2 class=\"wp-block-heading\">\u003Cstrong>Frequently Asked Questions\u003C/strong>\u003C/h2>\n\u003Ch3 class=\"wp-block-heading\">\u003Cstrong>Why use SvelteKit and Tailwind CSS together?\u003C/strong>\u003C/h3>\n\u003Cp>SvelteKit and Tailwind CSS work together seamlessly to provide a powerful and efficient way to build web applications. SvelteKit provides a robust framework for building fast and scalable applications, while Tailwind CSS provides a comprehensive set of pre-defined classes for styling HTML elements. Together, they allow developers to build high-quality user interfaces that are both performant and visually appealing.\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">\u003Cstrong>How do I customize my Tailwind CSS configuration?\u003C/strong>\u003C/h3>\n\u003Cp>Tailwind CSS comes with a default configuration, but you can customize it to fit your needs. You can use the \u003Cstrong>\u003Ccode>tailwind.config.js\u003C/code>\u003C/strong> file to customize various aspects of your design, such as colors, typography, and spacing. You can also create custom utility classes and configure variants for responsiveness and interactivity.\u003C/p>\n\u003Ch3 class=\"wp-block-heading\">\u003Cstrong>Are there any starter templates available for SvelteKit and Tailwind CSS?\u003C/strong>\u003C/h3>\n\u003Cp>Yes, there are several starter templates available that include SvelteKit and Tailwind CSS, such as the \u003Cstrong>\u003Ca href=\"https://github.com/topics/sveltekit-tailwind-template\">SvelteKit and Tailwind CSS Starter Template\u003C/a>\u003C/strong>. These templates provide a quick and easy way to get started with building web applications using SvelteKit and Tailwind CSS.\u003C/p>\n\u003C/content-block>\n\u003C/article>\n\u003C/div>\n\u003C/main>\n\u003Cdiv class=\"px-4 mx-auto max-w-screen-xl invert\">\u003Ch2 class=\"mb-8 text-2xl font-bold text-slate-100\">Related Articles\u003C/h2>\u003Cdiv class=\"grid gap-12 sm:grid-cols-2 lg:grid-cols-4\">\u003Carticle class=\"max-w-xs flex flex-col gap-2\">\u003Ch2 class=\"mb-2 text-xl font-bold leading-tight text-gray-50\">\u003Ca href=\"/blog/google-lighthouse-score-how-to-improve-your-website-performance/\">Google Lighthouse Score: How to Improve Your Website Performance\u003C/a>\u003C/h2>\u003Cp class=\"mb-4 font-light text-gray-500 \">Introduction In today’s digital landscape, a high-perf...\u003C/p>\u003Ca href=\"/blog/google-lighthouse-score-how-to-improve-your-website-performance/\" class=\"inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline\">Read in 2 minutes\u003C/a>\u003C/article>\u003Carticle class=\"max-w-xs flex flex-col gap-2\">\u003Ch2 class=\"mb-2 text-xl font-bold leading-tight text-gray-50\">\u003Ca href=\"/blog/how-to-add-tailwind-css-to-wordpress-complete-guide/\">How To Add Tailwind CSS to WordPress: Complete Guide\u003C/a>\u003C/h2>\u003Cp class=\"mb-4 font-light text-gray-500 \">Introduction Tailwind CSS is a utility-first CSS framework f...\u003C/p>\u003Ca href=\"/blog/how-to-add-tailwind-css-to-wordpress-complete-guide/\" class=\"inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline\">Read in 2 minutes\u003C/a>\u003C/article>\u003Carticle class=\"max-w-xs flex flex-col gap-2\">\u003Ch2 class=\"mb-2 text-xl font-bold leading-tight text-gray-50\">\u003Ca href=\"/blog/gutenberg-or-page-builder-things-to-consider-when-making-wordpress-websites/\">Gutenberg or Page Builder? Things To Consider When Making WordPress Websites\u003C/a>\u003C/h2>\u003Cp class=\"mb-4 font-light text-gray-500 \">Introduction Choosing the right editor for your WordPress pr...\u003C/p>\u003Ca href=\"/blog/gutenberg-or-page-builder-things-to-consider-when-making-wordpress-websites/\" class=\"inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline\">Read in 2 minutes\u003C/a>\u003C/article>\u003Carticle class=\"max-w-xs flex flex-col gap-2\">\u003Ch2 class=\"mb-2 text-xl font-bold leading-tight text-gray-50\">\u003Ca href=\"/blog/top-5-mistakes-to-avoid-with-wordpress-page-builders/\">Top 5 Mistakes to Avoid with WordPress Page Builders\u003C/a>\u003C/h2>\u003Cp class=\"mb-4 font-light text-gray-500 \">Introduction WordPress page builders have become increasingl...\u003C/p>\u003Ca href=\"/blog/top-5-mistakes-to-avoid-with-wordpress-page-builders/\" class=\"inline-flex items-center font-medium underline underline-offset-4 text-slate-300 hover:no-underline\">Read in 2 minutes\u003C/a>\u003C/article>\u003C/div>\u003C/div>\n\u003C/div>\n\u003Csection>\n\u003Cdiv class=\"py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 lc-block grayscale\">\n\u003Cdiv class=\"gap-16 justify-between items-center p-6 text-white bg-gray-900 rounded-lg dark:bg-gray-800 lg:flex lg:gap-24 md:p-12 lc-block\">\n\u003Cdiv class=\"w-full lc-block\">\n\u003Ch2 class=\"mb-4 text-3xl tracking-tight font-extrabold sm:text-4xl lc-block\">Sign up for our newsletter\u003C/h2>\n\u003Cp class=\"font-light text-gray-400 sm:text-xl lc-block\">Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.\u003C/p>\n\u003C/div>\n\u003Cdiv class=\"mt-6 w-full lg:mt-0 lc-block\">\n\u003Cform action=\"#\">\n\u003Cdiv class=\"items-center mb-3 space-y-4 sm:flex sm:space-y-0 lc-block\">\n\u003Cdiv class=\"relative w-full lc-block\">\n\u003Clabel for=\"member_email\" class=\"hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300\">Email address\u003C/label>\n\u003Cdiv class=\"flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none lc-block\">\n\u003Csvg class=\"w-5 h-5 text-gray-500 dark:text-gray-400 lc-block\" fill=\"currentColor\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\">\n\u003Cpath d=\"M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z\">\u003C/path>\n\u003Cpath d=\"M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z\">\u003C/path>\n\u003C/svg>\n\u003C/div>\n\u003Cinput class=\"block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500\" placeholder=\"Enter your email\" type=\"email\" required=\"\">\n\u003C/div>\n\u003Cdiv class=\" lc-block\">\n\u003Cbutton type=\"submit\" class=\"py-3 px-5 w-full text-sm font-medium text-center text-black rounded-lg border border-[.08rem] border-slate-100 cursor-pointer bg-slate-100 border-primary-600 hover:border-primary-700 sm:rounded-none sm:rounded-r-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 lc-block button\" role=\"button\">Subscribe\u003C/button>\n\u003C/div>\n\u003C/div>\n\u003Cdiv class=\"text-sm text-left text-gray-400 dark:text-gray-300 lc-block\">We care about the protection of your data. \u003Ca href=\"#\" class=\"font-medium text-white hover:underline lc-block button\" role=\"button\">Read our Privacy Policy\u003C/a>.\u003C/div>\n\u003C/form>\n\u003C/div>\n\u003C/div>\n\u003C/div>\n\u003C/section>\n\u003Cfooter class=\"flex bg-white flex-col items-center justify-center grayscale isolate mt-8 px-6 sm:mt-12 lg:px-8 lc-block\">\n\u003Cdiv class=\"mx-auto max-w-7xl text-center lc-block\">\n\u003Ch2 class=\"text-3xl font-bold leading-none tracking-tight text-slate-950 font-black sm:text-7xl lc-block\">Whatever Your Site Needs,\u003Cbr>Artisan Can Help.&nbsp;\u003C/h2>\n\u003Cp class=\"mx-auto mt-6 max-w-2xl text-2xl leading-8 text-slate-600 lc-block\">Boost your site's performance, security, and scalability with the Artisan platform. Looking for custom work? Contact us below.&nbsp;\u003C/p>\n\u003Cdiv class=\"mt-10 flex items-center justify-center gap-x-6 lc-block\">\u003Ca role=\"button\" class=\"btn lc-block button\">\u003Cspan id=\"brxe-kdbobv\" class=\"inline-flex gap-1.5 justify-center items-center py-3 px-4 w-auto max-w-full text-base font-thiCK tracking-wide leading-tight text-center text-white normal-case bg-black rounded lc-block\">\u003Csvg class=\"block h-5 font-medium leading-5 text-white align-middle lc-block\" xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"23\" viewBox=\"0 0 18 23\" fill=\"none\">\n\u003Cpath d=\"M8.49088 21.6118C8.26982 21.3486 7.97858 21.0082 7.84875 20.8503C7.71542 20.6924 7.57155 20.5205 7.52243 20.4679C7.36453 20.2889 6.89433 19.7205 6.58555 19.3415C6.41712 19.1345 6.23817 18.9204 6.18904 18.8643C6.11887 18.7871 5.09778 17.4888 4.8311 17.1414C4.59951 16.8397 4.05563 16.1028 3.1749 14.8957C2.9784 14.6255 2.62049 14.1553 2.17135 13.5799C2.00643 13.3694 1.73976 13.022 1.57484 12.8079C1.41343 12.5974 0.992363 12.0535 0.641473 11.6044C0.00636167 10.7938 -0.0743428 10.6605 0.0484687 10.5903C0.0765399 10.5763 0.17479 10.4675 0.26953 10.3517C0.444975 10.1306 0.676562 9.85343 0.946747 9.54465C1.21342 9.23938 2.13977 8.13758 2.63102 7.54458C3.24508 6.80069 3.50474 6.49191 3.83808 6.10944C4.18546 5.70942 4.20651 5.68135 4.52582 5.29888C4.66969 5.12694 4.82057 4.94448 4.86268 4.89536C4.90479 4.84623 5.18199 4.5164 5.47674 4.162C6.12237 3.39004 6.11185 3.40057 6.9996 2.3479C7.79612 1.404 7.97156 1.19347 8.50141 0.540812C8.71194 0.284663 8.91195 0.0530759 8.95055 0.0250047C9.04178 -0.0381555 9.0909 0.000441986 9.37161 0.351332C9.74707 0.814507 10.2664 1.4426 10.7331 1.99701C11.1998 2.5479 11.5857 3.01459 12.3331 3.93392C12.5823 4.23919 12.7963 4.49885 12.8068 4.50938C12.8174 4.51991 12.9893 4.72693 13.1823 4.96904C13.3788 5.21116 13.5577 5.43222 13.5858 5.46029C13.6139 5.48836 13.7928 5.70942 13.9893 5.95154C14.1858 6.19365 14.3648 6.41471 14.3929 6.44278C14.4174 6.47085 14.5367 6.61121 14.656 6.75507C14.8841 7.03579 15.3894 7.6323 15.8245 8.14109C15.9683 8.30952 16.1754 8.55514 16.2806 8.68497C16.3859 8.8148 16.7122 9.19376 17 9.53061C17.7509 10.4008 18 10.7061 18 10.7587C18 10.7938 17.6245 11.2816 17.5438 11.3517C17.4982 11.3903 16.6596 12.3763 16.2175 12.9097C15.7157 13.5132 15.3438 13.9553 15.0876 14.2466C14.9999 14.3448 14.8595 14.5097 14.7718 14.615C14.4455 15.008 14.4385 15.0115 14.3472 14.987C14.3016 14.9764 14.2174 14.9027 14.1578 14.8291C14.0244 14.6606 13.656 14.2325 13.4419 14.001C13.2068 13.7483 12.6349 13.0921 12.5788 13.0114C12.5366 12.9483 12.5507 12.9202 12.7296 12.6992C12.9402 12.443 13.0595 12.3062 13.3507 11.9833C13.7893 11.5026 13.8244 11.457 13.8244 11.3658C13.8244 11.25 13.6981 10.7307 13.6069 10.457C13.2244 9.34113 12.3963 8.09898 10.9296 6.45682C10.5225 6.00066 9.61373 4.83922 9.17512 4.21814C9.09792 4.10936 9.0102 4.01813 8.97862 4.01813C8.92949 4.01813 8.79616 4.162 8.66633 4.35499C8.63826 4.39709 8.44877 4.64973 8.24526 4.91641C7.91893 5.348 7.08732 6.49892 6.63818 7.14105C5.87324 8.2253 5.3048 9.2113 5.04865 9.88501C4.989 10.0464 4.92935 10.2008 4.91531 10.2289C4.89777 10.257 4.86619 10.3692 4.84163 10.4745C4.82057 10.5798 4.78548 10.6921 4.77145 10.7236C4.7539 10.7552 4.72232 10.9622 4.69776 11.1868C4.66267 11.5131 4.66267 11.6675 4.69776 11.9904C4.72232 12.2079 4.7539 12.4044 4.76794 12.4219C4.78548 12.443 4.81706 12.5377 4.84163 12.6325C4.90128 12.8465 5.09427 13.2395 5.25568 13.4746C5.55042 13.8957 5.8557 14.215 7.10487 15.4045C7.45225 15.7343 8.00665 16.2747 8.34351 16.6081C8.67685 16.9379 8.96458 17.2116 8.98213 17.2116C9.0102 17.2116 9.7576 16.3765 10.1471 15.9063C10.2418 15.794 10.3366 15.7028 10.3611 15.7028C10.3997 15.7028 10.4594 15.7659 10.8173 16.173C11.0945 16.4923 11.9717 17.4713 12.0173 17.5099C12.084 17.5695 12.3401 17.8923 12.3787 17.9695C12.4279 18.0643 12.4349 18.0537 11.6138 19.0187C11.2559 19.4397 10.8804 19.8889 10.7787 20.0152C10.6734 20.1415 10.5787 20.2538 10.5646 20.2643C10.5541 20.2749 10.3997 20.4538 10.2278 20.6608C10.0523 20.8714 9.84181 21.1275 9.75409 21.2293C9.66636 21.331 9.49443 21.5381 9.37161 21.6925C9.10845 22.0153 9.02774 22.089 8.95055 22.089C8.91897 22.0855 8.71194 21.8714 8.49088 21.6118Z\" fill=\"white\" class=\"tracking-wide\">\u003C/path>\n\u003C/svg>LINK YOUR SITE\u003C/span>\u003C/a>\u003C/div>\n\u003Cfooter class=\"bg-white\">\n\u003Cdiv class=\"mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8 lc-block\">\n\u003Cnav class=\"-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12\" aria-label=\"Footer\">\n\u003Cdiv class=\"pb-6 lc-block\">\n\u003Ca href=\"#\" class=\"text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button\" role=\"button\">Account\u003C/a>\n\u003C/div>\n\u003Cdiv class=\"pb-6 lc-block\">\n\u003Ca href=\"#\" class=\"text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button\" role=\"button\">Blog\u003C/a>\n\u003C/div>\n\u003Cdiv class=\"pb-6 lc-block\">\n\u003Ca href=\"#\" class=\"text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button\" role=\"button\">Careers\u003C/a>\n\u003C/div>\n\u003Cdiv class=\"pb-6 lc-block\">\n\u003Ca href=\"#\" class=\"text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button\" role=\"button\">Agencies\u003C/a>\n\u003C/div>\n\u003Cdiv class=\"pb-6 lc-block\">\n\u003Ca href=\"#\" class=\"text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button\" role=\"button\">Partners\u003C/a>\n\u003C/div>\n\u003Cdiv class=\"pb-6 lc-block\">\n\u003Ca href=\"#\" class=\"text-sm leading-6 text-gray-600 hover:text-gray-900 lc-block button\" role=\"button\">Privacy Policy\u003C/a>\n\u003C/div>\n\u003C/nav>\n\u003Cdiv class=\"mt-10 flex justify-center space-x-10 lc-block\">\n\u003Ca href=\"#\" class=\"text-gray-400 hover:text-gray-500 lc-block button\" role=\"button\">\n\u003Cspan class=\"sr-only lc-block\">Facebook\u003C/span>\n\u003Csvg class=\"h-6 w-6 lc-block\" fill=\"currentColor\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n\u003Cpath fill-rule=\"evenodd\" d=\"M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z\" clip-rule=\"evenodd\">\u003C/path>\n\u003C/svg>\n\u003C/a>\n\u003Ca href=\"#\" class=\"text-gray-400 hover:text-gray-500 lc-block button\" role=\"button\">\n\u003Cspan class=\"sr-only lc-block\">Instagram\u003C/span>\n\u003Csvg class=\"h-6 w-6 lc-block\" fill=\"currentColor\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n\u003Cpath fill-rule=\"evenodd\" d=\"M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z\" clip-rule=\"evenodd\">\u003C/path>\n\u003C/svg>\n\u003C/a>\n\u003Ca href=\"#\" class=\"text-gray-400 hover:text-gray-500 lc-block button\" role=\"button\">\n\u003Cspan class=\"sr-only lc-block\">Twitter\u003C/span>\n\u003Csvg class=\"h-6 w-6 lc-block\" fill=\"currentColor\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n\u003Cpath d=\"M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84\">\u003C/path>\n\u003C/svg>\n\u003C/a>\n\u003Ca href=\"#\" class=\"text-gray-400 hover:text-gray-500 lc-block button\" role=\"button\">\n\u003Cspan class=\"sr-only lc-block\">GitHub\u003C/span>\n\u003Csvg class=\"h-6 w-6 lc-block\" fill=\"currentColor\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n\u003Cpath fill-rule=\"evenodd\" d=\"M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z\" clip-rule=\"evenodd\">\u003C/path>\n\u003C/svg>\n\u003C/a>\n\u003Ca href=\"#\" class=\"text-gray-400 hover:text-gray-500 lc-block button\" role=\"button\">\n\u003Cspan class=\"sr-only lc-block\">YouTube\u003C/span>\n\u003Csvg class=\"h-6 w-6 lc-block\" fill=\"currentColor\" viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n\u003Cpath fill-rule=\"evenodd\" d=\"M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z\" clip-rule=\"evenodd\">\u003C/path>\n\u003C/svg>\n\u003C/a>\n\u003C/div>\n\u003Cp class=\"mt-10 text-center text-xs leading-5 text-gray-500 lc-block\">© 2023 Artisan Studios, Inc. All rights reserved.\u003C/p>\n\u003C/div>\n\u003C/footer>\n\u003C/div>\n\u003C/footer>\n"}},"uses":{"params":["blog","slug"]}}];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.29a8c521.js"),
+						import("../_app/immutable/entry/app.876817f6.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
