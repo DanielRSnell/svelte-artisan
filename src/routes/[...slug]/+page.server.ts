@@ -1,12 +1,9 @@
 import got from 'got';
 import * as cheerio from 'cheerio';
-import * as urlModule from 'url';
-
-export const prerender = true;
 
 export async function load({ params }) {
 	const config = {
-		project: 'https://domartisan.com',
+		project: 'https://spotlight.tailwindui.com',
 		absolute: false
 	};
 
@@ -30,18 +27,19 @@ export async function load({ params }) {
 
 		const $ = cheerio.load(response.body);
 
-		$('a[href], img[src]').each((i, element) => {
-			let attr = $(element).is('a') ? 'href' : 'src';
-			let elementUrl = $(element).attr(attr);
+		const attributes = ['src', 'href', 'srcset'];
 
-			if (elementUrl) {
-				let parsedURL = urlModule.parse(elementUrl, true, true);
-				if (parsedURL.host === urlModule.parse(config.project).host) {
-					let relativePath = parsedURL.pathname + (parsedURL.search || '') + (parsedURL.hash || '');
-					$(element).attr(attr, relativePath);
-				}
-			}
-		});
+// Iterate over each attribute
+attributes.forEach(attr => {
+    // Select all elements with the given attribute
+    $(`[${attr}]`).each((i, element) => {
+        // If the attribute starts with '/', prefix it with the project path
+        let attrValue = $(element).attr(attr);
+        if (attrValue.startsWith('/')) {
+            $(element).attr(attr, config.project + attrValue.slice(1));
+        }
+    });
+});
 
 		const dom = $('html').html();
 
@@ -61,3 +59,5 @@ export async function load({ params }) {
 		};
 	}
 }
+
+export const prerender = true;
