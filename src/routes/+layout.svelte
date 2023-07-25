@@ -14,6 +14,7 @@ import '../app.css';
 <svelte:head>
 	{#if browser}
 		<script src="/scripts/alpine/core.js" defer />
+		
 	{/if}
 </svelte:head>
 

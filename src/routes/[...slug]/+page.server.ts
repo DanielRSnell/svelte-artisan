@@ -29,23 +29,23 @@ export async function load({ params }) {
 
 		const attributes = ['src', 'href', 'srcset'];
 
-// Iterate over each attribute
-attributes.forEach(attr => {
-    // Select all elements with the given attribute
-    $(`[${attr}]`).each((i, element) => {
-        // If the attribute starts with '/', prefix it with the project path
-        let attrValue = $(element).attr(attr);
-        if (attrValue.startsWith('/')) {
-            $(element).attr(attr, config.project + attrValue.slice(1));
-        }
-    });
-});
+		// Iterate over each attribute
+		attributes.forEach(attr => {
+			// Select all elements with the given attribute
+			$(`[${attr}]`).each((i, element) => {
+				// If the attribute starts with '/', prefix it with the project path
+				let attrValue = $(element).attr(attr);
+				if (attrValue.startsWith('/')) {
+					$(element).attr(attr, config.project + attrValue);
+				}
+			});
+		});
 
 		const dom = $('html').html();
 
 		return {
 			props: {
-				bodyContent: dom
+				bodyContent: dom.split(config.project).join(''),
 			}
 		};
 	} catch (error) {

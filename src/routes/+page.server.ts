@@ -27,25 +27,27 @@ export async function load({ params }) {
 
 		const $ = cheerio.load(response.body);
 
-		const attributes = ['src', 'href', 'srcset'];
+		const attributes = ['src', 'srcset'];
 
-// Iterate over each attribute
-attributes.forEach(attr => {
-    // Select all elements with the given attribute
-    $(`[${attr}]`).each((i, element) => {
-        // If the attribute starts with '/', prefix it with the project path
-        let attrValue = $(element).attr(attr);
-        if (attrValue.startsWith('/')) {
-            $(element).attr(attr, config.project + attrValue.slice(1));
-        }
-    });
-});
+		// Iterate over each attribute
+		attributes.forEach(attr => {
+			// Select all elements with the given attribute
+			$(`[${attr}]`).each((i, element) => {
+				// If the attribute starts with '/', prefix it with the project path
+				let attrValue = $(element).attr(attr);
+				if (attrValue.startsWith('/')) {
+					$(element).attr(attr, config.project + attrValue);
+				}
+			});
+		});
 
-		const dom = $('html').html();
+		$('scripts').remove()
+
+		const dom = $('body').html();
 
 		return {
 			props: {
-				bodyContent: dom
+				bodyContent: dom?.split(config.project).join(''),
 			}
 		};
 	} catch (error) {
