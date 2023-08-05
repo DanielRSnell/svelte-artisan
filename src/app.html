@@ -5,44 +5,6 @@
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
-		<script
-			src="https://cdn.tailwindcss.com"></script>
-		<script type="text/javascript">
-	window.onload = function () {
-		const baseUrl = 'https://spotlight.tailwindui.com';
-
-		const observer = new MutationObserver((mutations) => {
-			mutations.forEach((mutation) => {
-				if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-					mutation.addedNodes.forEach((node) => {
-						if (node.nodeType === 1) { // Check if node is an Element node
-							if (node.nodeName === 'A' && node.getAttribute('href').startsWith(baseUrl)) {
-								node.setAttribute('href', node.getAttribute('href').replace(baseUrl, ''));
-							} else if (node.nodeName === 'IMG') {
-								if (node.getAttribute('src').startsWith(baseUrl)) {
-									node.setAttribute('src', node.getAttribute('src').replace(baseUrl, ''));
-								}
-								if (node.hasAttribute('srcset')) {
-									let srcset = node.getAttribute('srcset');
-									let sources = srcset.split(',');
-									let newSrcset = sources.map(src => {
-										let trimmedSrc = src.trim();
-										return trimmedSrc.startsWith(baseUrl) ? trimmedSrc.replace(baseUrl, '') : trimmedSrc;
-									}).join(', ');
-									node.setAttribute('srcset', newSrcset);
-								}
-							}
-						}
-					});
-				}
-			});
-		});
-
-		observer.observe(document.body, { childList: true, subtree: true });
-	}
-
-</script>
-
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
 		<div style="display: contents">%sveltekit.body%</div>
