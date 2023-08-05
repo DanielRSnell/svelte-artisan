@@ -19,7 +19,7 @@ export async function load({ params }) {
 	const url = `${config.project}/` + GenerateRoute();
 	console.log(`🔥 ${url} is building.`);
 	try {
-		const response = await got(url.split('/?').join('?'));
+		const response = await got(url);
 
 		if (!response) {
 			throw new Error('Not found');
