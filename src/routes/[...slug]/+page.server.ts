@@ -3,7 +3,7 @@ import * as cheerio from 'cheerio';
 
 export async function load({ params }) {
 	const config = {
-		project: 'https://domartisan.com', // Fixed typo
+		project: 'https://dev.domartisan.com', // Fixed typo
 		absolute: false
 	};
 
