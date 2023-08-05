@@ -57,7 +57,7 @@ export async function load({ params }) {
 				});
 		});
 
-		$('a').each(function (i, link) {
+			$('a').each(function (i, link) {
 			let href = $(link).attr('href');
 			if (href && href.startsWith('https://dev.domartisan.com')) {
 				$(link).attr('href', href.replace('https://dev.domartisan.com', ''));
@@ -66,6 +66,23 @@ export async function load({ params }) {
 
 		$('script').remove();
 		$('.skip-link').remove();
+
+		$('main > section div')
+			.not('.sphere-animation')
+			.filter(function () {
+				// Check if the div has child nodes other than div or img elements
+				return $(this).children().not('div').length > 0;
+			})
+			.each(function () {
+				// Add attributes to each selected element
+				$(this).attr(
+					'_',
+					`on intersection(intersecting) having threshold 0.5
+										if intersecting transition opacity to 1
+										else transition opacity to 0`
+				);
+			});
+
 		const dom = $('html').html();
 
 		return {

@@ -6,12 +6,12 @@
 <svelte:head>
 	{#if browser}
 		<script src="https://media.domartisan.com/scripts/htmx/core.js"></script>
-		<script src="https://media.domartisan.com/scripts/_hyperscript/core.js"></script>
+		<script src="https://unpkg.com/hyperscript.org@0.9.11"></script>
 	{/if}
 </svelte:head>
 
 <div class="svelte-wrapper flex flex-col justify-start items-stretch w-full">
-<slot />
+	<slot />
 </div>
 
 <style>
