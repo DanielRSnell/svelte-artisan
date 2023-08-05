@@ -1,0 +1,51 @@
+<div id="prose-list" class="pt-6 pb-8 grayscale bg-white lg:pb-16">
+	<div class="flex flex-row justify-between mx-auto max-w-7xl lc-block">
+		<div class="w-full max-w-3xl mx-auto lc-block">
+			<section id="content-list">
+			
+			[lc_loop]
+
+				<div id="prose-list-item" class="divide-y divide-slate-500">
+ 	<article class="py-6">
+ 		<div class="flex items-center justify-between mb-3 text-gray-500 lc-block">
+ 			<div class="lc-block">
+ 				[artisan_post_tags]
+ 				<a class="bg-slate-200 text-slate-700 text-sm font-medium mr-2 px-2.5 py-0.5 rounded mb-2" href="%7Btag_link%7D">#{tag_name}</a>
+ 				[/artisan_post_tags]
+ 			</div>
+ 		</div>
+ 		<h2 class="mb-2 text-2xl font-bold tracking-tight text-slate-950 hover:underline lc-block"><a href="%5Bartisan_post_permalink%5D">[artisan_post_title]</a></h2>
+ 		<p class="mb-5 text-slate-600 lc-block">[artisan_post_excerpt]</p>
+ 		<div class="flex items-center justify-between lc-block mt-4">
+ 			[artisan_author_details]
+ 			<a class="flex items-center space-x-2" href="%7Bauthor_url%7D">
+ 				[lc_the_avatar class="rounded-full" size="32"]
+ 				<span class="font-medium text-slate-700 lc-block"><strong>{author_name}</strong> on [artisan_published_date]</span>
+ 			</a>
+ 			[/artisan_author_details]
+ 			[artisan_read_more link_class="inline-flex gap-1 items-center font-medium text-blue-600 hover:underline dark:text-blue-500" svg_class="w-4 h-4 ml-2"]
+ 		</div>
+ 	</article>
+ </div>
+			
+			[/lc_loop]
+			<!-- End of the loop -->
+			</section>
+		</div>
+		<aside class="hidden lg:block lg:w-80" aria-labelledby="sidebar-label">
+			<div class="sticky top-36 lc-block">
+				<h3 id="sidebar-label" class="sr-only lc-block">Sidebar</h3>
+				<div class="lc-block">
+					[artisan_sidebar_tags]
+				</div>
+				<div class="lc-block">
+					[artisan_resources_block]
+				</div>
+<!-- 				<div class="lc-block">
+					[artisan_sidebar_changelog]
+				</div> -->
+			</div>
+		</aside>
+	</div>
+	
+</div>

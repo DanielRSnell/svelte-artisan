@@ -1,0 +1,46 @@
+
+
+    <section id="slide-form">
+        <div id="slide-parent" class="pt-8 pb-2 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:pb-2 lg:px-6 lc-block grayscale">
+            <div id="slide-container" class="flex flex-col gap-4 justify-between items-center p-6 text-slate-950 bg-white rounded-lg lg:gap-12 md:p-12 lc-block">
+                <div class="lc-block text-center flex flex-1 justify-center items-center flex-col gap-2 leading-relaxed w-full">
+                    <h2 class="relative inline-block px-5 py-2 mb-4 text-5xl font-bold font-extrabold bg-white border-2 border-black lc-block" editable="inline">
+                        <div class="absolute w-full py-2 h-full inset-0 border-2 border-black bg-black ml-1.5 mt-1.5 lc-block"></div>
+                        <div class="absolute inset-0 w-full h-full py-2 bg-white lc-block"></div>
+                        <span class="relative lc-block" editable="inline">
+                            {{ post.manager.question }}
+                        </span>
+                    </h2>
+                    <p class="text-2xl leading-relaxed font-medium text-gray-600 lc-block" editable="inline">
+                        {{ post.manager.describe }}
+                    </p>
+                    <p id="error-message" class="text-red-500 hidden">Choose one of the options</p>
+                </div>
+                <div id="slide-template" class="flex w-full justify-center items-center">
+                    <ul id="slide-loop" class="grid w-full max-w-3xl gap-4 sm:grid-cols-2 md:grid-cols-2">
+                        {% for clone in post.manager.options %}
+                        <li id="question-options" class="flex w-full cursor-pointer justify-center items-stretch hover:bg-slate-200 focus:invert">
+                                <button hx-post="/wp-json/artisan/v1/onboard-form" 
+                                        hx-vals='{"question": "{{ post.manager.question }}","answer": "{{ clone.answer }}","user_id": "{{ user.ID }}", "next_post": "" }'
+                                        hx-trigger="click"
+                                        _="on click go to url /"
+                                        class="border ease-in-out transition-opacity duration-100 bg-white text-slate-950 py-4 px-6 rounded-md flex-1 hover:bg-slate-200 focus:invert transition">
+
+                                <div class="block flex flex-col justify-center items-center gap-2 text-center">
+                                    <img src="{{ clone.icon_image.thumbnail.url }}" class="mb-2 w-7 h-7 aspect-auto text-sky-500" width="{{ clone.icon_image.thumbnail.width }}" height="{{ clone.icon_image.thumbnail.height }}" alt="{{ clone.icon_image.thumbnail.alt }}">
+                                    <div class="w-full text-lg font-semibold">
+                                        {{clone.answer}}
+                                    </div>
+                                    <div class="w-full text-sm">
+                                        {{ clone.describe }}
+                                    </div>
+                                    <p class="text-slate-400">{{ clone.caption }}</p>
+                                </div>
+                            </button>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>

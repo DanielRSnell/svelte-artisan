@@ -1,0 +1,48 @@
+{% set args = {
+    'posts_per_page': 4,
+    'orderby': 'date',
+    'order': 'DESC'
+} %}
+
+{% set posts = mb.get_posts(args) %}
+
+{% if posts %}
+<div class="invert articles-grid grid grid-cols-1 gap-8 sm:grid-cols-1 lg:gap-y-12 md:grid-cols-2 lg:grid-cols-2">
+  {% for post in posts %}
+    {% set excerpt = post.post_excerpt %}
+  <article class="cursor-pointer p-6 bg-black rounded-lg border border-gray-200 shadow-md flex flex-col justify-between duration-300 shadow-slate-50 hover:shadow-lg hover:invert" 
+    _="on click go to url {{ post.url }}
+        end
+        on intersection(intersecting) having threshold 0.5
+            if intersecting transition opacity to 1
+            else transition opacity to 0">
+      <div class="flex flex-row justify-start gap-2 items-center mb-5 text-gray-500">
+        {% for tag in post.tags %}
+          <span class="bg-slate-300 text-slate-900 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-primary-200 dark:text-primary-800">
+            {{ tag.name }}
+          </span>
+        {% endfor %}
+        <span class="block text-sm">Published {{ post.date('F j, Y') }}</span>
+      </div>
+      <h2 class="mb-2 text-2xl font-bold tracking-tight text-slate-50">
+        {{ post.title }}
+      </h2>
+      <p class="mb-5 text-slate-100">
+        {% set content = post.post_content | striptags %}
+        {% if content|length > 120 %}   
+                {{ content | slice(0, 120) }}...    
+        {% else %}
+                {{ content }}
+        {% endif %}
+      </p>
+      <div class="flex pt-4 justify-between items-center">
+        <div class="flex gap-1 items-center space-x-4">
+          <img class="w-7 h-7 rounded-full invert" src="{{ mb.get_avatar_url( author.ID ) }}" alt="{{ author.get_avatar }} profile picture" />
+          <span class="font-medium text-slate-100">{{ author.display_name }}</span>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+  </div>
+{% endif %}
+

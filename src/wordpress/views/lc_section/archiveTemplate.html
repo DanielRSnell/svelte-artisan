@@ -1,0 +1,29 @@
+<div lc-helper="shortcode" class="live-shortcode">
+	[lc_get_post post_type="lc_partial" slug="header"]
+</div>
+<main class="pt-6 pb-8 grayscale bg-white lg:pb-16">
+	<div class="flex flex-row justify-between px-4 mx-auto max-w-7xl lc-block">
+		<div class="w-full max-w-3xl mx-auto lc-block">
+			<div lc-helper="shortcode" class="live-shortcode">[artisan_list-items]</div>
+		</div>
+
+		<aside class="hidden lg:block lg:w-80" aria-labelledby="sidebar-label">
+			<div class="sticky top-36 lc-block">
+				<h3 id="sidebar-label" class="sr-only lc-block" editable="inline">Sidebar</h3>
+				<div lc-helper="shortcode" class="live-shortcode">
+					[artisan_sidebar_tags]
+				</div>
+				<div class="live-shortcode" lc-helper="shortcode">
+					[artisan_resources_block]
+				</div>
+				<div lc-helper="shortcode" class="live-shortcode">
+					[artisan_sidebar_changelog]
+				</div>
+			</div>
+		</aside>
+	</div>
+</main>
+<div lc-helper="shortcode" class="live-shortcode">
+
+	[lc_get_post post_type="lc_partial" slug="footer"]
+</div>

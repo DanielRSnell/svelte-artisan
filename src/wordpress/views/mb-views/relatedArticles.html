@@ -1,0 +1,39 @@
+
+{% set args = {
+    'category__in': wp.get_post_categories(post.ID), 
+    'post__not_in': [post.ID], 
+    'posts_per_page': 2, 
+    'orderby': 'rand'
+} %}
+
+{% set related_posts = mb.get_posts(args) %}
+
+<section>
+    <div id="parent-related" class="flex flex-col justify-center items-center w-full">
+    <div id="parent-container" class="max-w-7xl justify-center items-center" > 
+        <div class="mx-auto max-w-2xl lg:mx-0">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Related Posts</h2>
+            <p class="mt-2 text-lg leading-8 text-gray-600">Push the boundaries of WordPress with Artisan.</p>
+        </div>
+    <div class="max-w-5xl mt-10 grid grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-4 sm:pt-4 md:grid-cols-2">
+        {% for post in related_posts %}
+        {% set item = attribute( post.thumbnail, '1536x1536' ) %}
+            <article class=" flex flex-1 flex-col gap-2 sm:px-2" _="on click go to url {{post.url}}">
+            <div class="flex items-center gap-x-4 text-xs">
+          <time datetime="2020-03-16" class="text-gray-500">{{ post.date | date( 'M j, Y' ) }}</time>
+        </div>
+            {% if item.url %}
+                <a href="{{ post.url }}">
+                    <img src="{{ post.url }}" class="mb-5 rounded-lg text-slate-100" alt="{{ post.title }}">
+                </a>
+                {% endif %}
+                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-600">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </h2>
+                <p class="mb-4 font-light text-gray-500 leading-relaxed">{{ mb.do_shortcode('[artisan_post_excerpt]') }}</p>
+            </article>
+        {% endfor %}
+        </div>
+</div>
+</div>
+</section>

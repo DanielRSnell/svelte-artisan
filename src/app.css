@@ -1,3 +1,113 @@
+html {
+    margin-top: 0 !important;
+    padding: 0 !important;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    a {
+        @apply grayscale;
+    }
+
+    code {
+        @apply text-slate-100;
+    }
+
+    .text-end {
+        display: none !important;
+    }
+
+    #prose-list-item {
+        @apply border-t border-slate-200;
+    }
+
+    .language-bash {
+        @apply invert grayscale-0 py-1 px-[0.25em] rounded-md;
+    }
+
+}
+
+@layer component {
+    .fade-me-in.htmx-added {
+        opacity: 0;
+    }
+
+    .fade-me-in {
+        opacity: 1;
+        transition: opacity 1s ease-out;
+    }
+
+    .fade-me-out.htmx-swapping {
+        opacity: 0;
+        transition: opacity 1s ease-out;
+    }
+
+    .animation-wrapper {
+        width: 50%;
+        padding-bottom: 10%;
+    }
+
+    .sphere path {
+        fill: url(#sphereGradient);
+        stroke-width: 1px;
+        stroke: rgba(80, 80, 80, 0.05);
+        backface-visibility: hidden;
+    }
+
+    @media (min-width: 500px) {
+        .sphere path {
+            stroke-width: 0.4px;
+        }
+    }
+
+    .bg-conic-gradient {
+        background: linear-gradient(90deg,
+                #44ff9a -0.55%,
+                #44b0ff 22.86%,
+                #8b44ff 48.36%,
+                #ff6644 73.33%,
+                #ebff70 99.34%);
+        animation: RGBBreathing 5s infinite, ShadowBreathing 5s infinite;
+        backdrop-filter: blur(3px);
+    }
+
+    @keyframes RGBBreathing {
+        0% {
+            background-color: rgba(255, 0, 0, 0.85);
+        }
+
+        33% {
+            background-color: rgba(0, 255, 0, 0.5);
+        }
+
+        66% {
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+
+        100% {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+    }
+
+    @keyframes ShadowBreathing {
+        0% {
+            box-shadow: 0 4px 8px 15px rgba(255, 0, 0, 0.75);
+        }
+
+        50% {
+            box-shadow: 0 4px 8px 15px rgba(255, 255, 255, 0.75);
+        }
+
+        100% {
+            box-shadow: 0 4px 8px 15px rgba(255, 0, 0, 0.75);
+        }
+    }
+
+
+}
+
+@layer utilities {}
