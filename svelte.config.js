@@ -14,19 +14,19 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter({
 			// See below for an explanation of these options
-			// Cloudflare 
+			// Cloudflare
 			// routes: {
 			// 	include: ['/*'],
 			// 	exclude: ['<all>']
 			// }
-			
-            // default options are shown. On some platforms
-            // these options are set automatically — see below
-            pages: 'build',
-            assets: 'build',
-            fallback: undefined,
-            precompress: false,
-            strict: true
+
+			// default options are shown. On some platforms
+			// these options are set automatically — see below
+			pages: 'build',
+			assets: 'build',
+			fallback: undefined,
+			precompress: false,
+			strict: true
 		}),
 		prerender: {
 			concurrency: 5, // The number of pages that can be prerendered simultaneously.
