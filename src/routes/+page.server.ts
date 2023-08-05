@@ -3,7 +3,7 @@ import * as cheerio from 'cheerio';
 
 export async function load({ params }) {
 	const config = {
-		project: 'https://domartisan.com', // Fixed typo
+		project: 'https://automaticcss.com/', // Fixed typo
 		absolute: false
 	};
 
@@ -47,7 +47,7 @@ export async function load({ params }) {
 
 		$('scripts').remove();
 
-		const dom = $('body').html();
+		const dom = $('html').html();
 
 		return {
 			props: {
