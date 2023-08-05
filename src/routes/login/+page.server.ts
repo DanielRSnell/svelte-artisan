@@ -3,7 +3,7 @@ import * as cheerio from 'cheerio';
 
 export async function load({ params }) {
 	const config = {
-		project: 'https://spotlight.tailwindui.com',
+		project: 'https://domartisan.com',
 		absolute: false
 	};
 
@@ -27,25 +27,25 @@ export async function load({ params }) {
 
 		const $ = cheerio.load(response.body);
 
-		const attributes = ['src', 'href', 'srcset'];
+		// const attributes = ['src', 'href', 'srcset'];
 
-		// Iterate over each attribute
-		attributes.forEach(attr => {
-			// Select all elements with the given attribute
-			$(`[${attr}]`).each((i, element) => {
-				// If the attribute starts with '/', prefix it with the project path
-				let attrValue = $(element).attr(attr);
-				if (attrValue.startsWith('/')) {
-					$(element).attr(attr, config.project + attrValue);
-				}
-			});
-		});
+		// // Iterate over each attribute
+		// attributes.forEach(attr => {
+		// 	// Select all elements with the given attribute
+		// 	$(`[${attr}]`).each((i, element) => {
+		// 		// If the attribute starts with '/', prefix it with the project path
+		// 		let attrValue = $(element).attr(attr);
+		// 		if (attrValue.startsWith('/')) {
+		// 			$(element).attr(attr, config.project + attrValue);
+		// 		}
+		// 	});
+		// });
 
-		const dom = $('html').html();
+		const dom = $('body').html();
 
 		return {
 			props: {
-				bodyContent: dom.split(config.project).join(''),
+				bodyContent: dom,
 			}
 		};
 	} catch (error) {
