@@ -6,8 +6,8 @@
 
 	<svelte:head>
 {#if browser}
-	<script src="https://unpkg.com/hyperscript.org@0.9.11"></script>
-	<script src="https://unpkg.com/htmx.org@1.9.4"></script>
+	<script src="https://media.domartisan.com/scripts/htmx/core.js"></script>
+	<script src="https://media.domartisan.com/scripts/_hyperscript/core.js"></script>
 {/if}
 	</svelte:head>
 

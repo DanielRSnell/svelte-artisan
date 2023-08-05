@@ -45,8 +45,6 @@ export async function load({ params }) {
 		// You can include the line below if you want to remove all script tags
 		// $('script').remove();
 
-		$('scripts').remove();
-
 		const dom = $('body').html();
 
 		return {
