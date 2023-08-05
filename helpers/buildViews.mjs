@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import url from 'url';
 
-const endpoint = 'https://dev.domartisan.com'; // Replace with your endpoint
+const endpoint = 'https://domartisan.com'; // Replace with your endpoint
 const sitemapUrl = `${endpoint}/sitemap.xml`;
 
 const config = {
