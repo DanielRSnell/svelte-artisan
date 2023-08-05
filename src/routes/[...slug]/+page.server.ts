@@ -64,7 +64,7 @@ export async function load({ params }) {
 			}
 		});
 
-		$('script').remove();
+		// $('script').remove();
 		$('.skip-link').remove();
 
 		$('main > section div')
