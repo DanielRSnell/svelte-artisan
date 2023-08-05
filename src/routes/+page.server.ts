@@ -47,7 +47,7 @@ export async function load({ params }) {
 
 		$('scripts').remove();
 
-		const dom = $('html').html();
+		const dom = $('body').html();
 
 		return {
 			props: {
