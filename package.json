@@ -6,7 +6,7 @@
 		"clean:wp": "rimraf ./src/wordpress",
 		"build:digitalocean": "yarn install --production=false && yarn run clean && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile",
 		"dev": "vite dev",
-		"build": "npm run clean:wp && vite build",
+		"build": "npm run clean:wp && npm run refresh && vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",

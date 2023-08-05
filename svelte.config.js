@@ -26,13 +26,12 @@ const config = {
             fallback: undefined,
             precompress: false,
             strict: true
-    
 		}),
 		prerender: {
 			concurrency: 5, // The number of pages that can be prerendered simultaneously.
 			crawl: true, // Whether SvelteKit should find pages to prerender by following links from entries.
 			entries: ['*'], // An array of pages to prerender, or start crawling from (if crawl: true).
-
+			default: true,
 			handleHttpError: ({ status, path, referrer, referenceType, message }) => {
 				// Handle HTTP errors according to your own logic.
 				if (status >= 500) {
