@@ -1,6 +1,9 @@
 <script lang='ts'>
 	import { browser } from '$app/environment';
 	import '../app.css';
+	import '../bricks.css';
+	import '../automatic.css';
+	import '../frames.css';
 </script>
 
 
