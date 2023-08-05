@@ -57,7 +57,7 @@ export async function load({ params }) {
 				});
 		});
 
-			$('a').each(function (i, link) {
+		$('a').each(function (i, link) {
 			let href = $(link).attr('href');
 			if (href && href.startsWith('https://dev.domartisan.com')) {
 				$(link).attr('href', href.replace('https://dev.domartisan.com', ''));
@@ -66,7 +66,11 @@ export async function load({ params }) {
 
 		// $('script').remove();
 		$('.skip-link').remove();
-
+		// Select all elements with the hx-boost attribute
+		$('[hx-boost]').each(function () {
+			// Remove the hx-boost attribute from each selected element
+			$(this).removeAttr('hx-boost');
+		});
 		$('main > section div')
 			.not('.sphere-animation')
 			.filter(function () {

@@ -29,7 +29,11 @@ export async function load({ params }) {
 
 		// Uncommented the following section to handle 'src' and 'srcset'
 		const attributes = ['src', 'srcset'];
-
+		// Select all elements with the hx-boost attribute
+		$('[hx-boost]').each(function () {
+			// Remove the hx-boost attribute from each selected element
+			$(this).removeAttr('hx-boost');
+		});
 		// Iterate over each attribute
 		attributes.forEach((attr) => {
 			// Select all elements with the given attribute
