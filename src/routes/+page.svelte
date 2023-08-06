@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import anime from 'animejs';
+	import { fade } from 'svelte/transition';
 
 	export let data;
 
@@ -107,4 +108,38 @@
 	onMount(sphereAnimation);
 </script>
 
-{@html bodyContent}
+<section hx-push-url="true">
+	<div class="flex gap-4 px-2 py-4 bg-slate-100 items-center">
+		<h3 class="text-base font-sans text-slate-800/40">HTMX Actions:</h3>
+		<button
+			class="px-4 py-2 rounded-lg border bg-white border-slate-500"
+			hx-get="/blog"
+			hx-swap="outerHTML"
+			hx-select=".wrapper"
+			hx-target=".wrapper"
+			hx-trigger="click"
+			hx-swap-oob="true">Fetch Blog</button
+		>
+		<button
+			class="px-4 py-2 rounded-lg border bg-white border-slate-500"
+			hx-get="/home-page"
+			hx-swap="outerHTML"
+			hx-select=".wrapper"
+			hx-target=".wrapper"
+			hx-trigger="click"
+			hx-swap-oob="true">Fetch Home</button
+		>
+		<button
+			class="px-4 py-2 rounded-lg border bg-white border-slate-500"
+			hx-get="/login"
+			hx-swap="outerHTML"
+			hx-select=".wrapper"
+			hx-target=".wrapper"
+			hx-trigger="click"
+			hx-swap-oob="true">Login</button
+		>
+	</div>
+</section>
+
+
+<main transition:fade>{@html bodyContent}</main>
