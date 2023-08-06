@@ -69,22 +69,22 @@ export async function load({ params }) {
 		});
 		$('.skip-link').remove();
 		$('script').remove();
-		$('main > section div')
-			.not('.sphere-animation')
-			.filter(function () {
-				// Check if the div has child nodes other than div or img elements
-				return $(this).children().not('div').length > 0;
-			})
-			.each(function () {
-				// Add attributes to each selected element
-				$(this).attr(
-					'_',
-					`on intersection(intersecting) having threshold 0.5
-										if intersecting transition opacity to 1
-										else transition opacity to 0`
-				);
-			});
-		const dom = $('body').html();
+		// $('main > section div')
+		// 	.not('.sphere-animation')
+		// 	.filter(function () {
+		// 		// Check if the div has child nodes other than div or img elements
+		// 		return $(this).children().not('div').length > 0;
+		// 	})
+		// 	.each(function () {
+		// 		// Add attributes to each selected element
+		// 		$(this).attr(
+		// 			'_',
+		// 			`on intersection(intersecting) having threshold 0.5
+		// 								if intersecting transition opacity to 1
+		// 								else transition opacity to 0`
+		// 		);
+		// 	});
+		const dom = $('body').html()?.split('https://dev.domartisan.com').join('').split('dev.domartisan.com').join('');
 
 		return {
 			props: {
@@ -103,4 +103,4 @@ export async function load({ params }) {
 	}
 }
 
-export const prerender = true;
+// export const prerender = true;

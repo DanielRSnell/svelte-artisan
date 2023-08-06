@@ -16,7 +16,7 @@ export async function load({ params }) {
 		return route;
 	}
 
-	const url = `${config.project}/` + GenerateRoute();
+	const url = `${config.project}` + GenerateRoute();
 	console.log(`🔥 ${url} is building.`);
 	try {
 		const response = await got(url.split('/?').join('?'));
@@ -71,23 +71,23 @@ export async function load({ params }) {
 			// Remove the hx-boost attribute from each selected element
 			$(this).removeAttr('hx-boost');
 		});
-		$('main > section div')
-			.not('.sphere-animation')
-			.filter(function () {
-				// Check if the div has child nodes other than div or img elements
-				return $(this).children().not('div').length > 0;
-			})
-			.each(function () {
-				// Add attributes to each selected element
-				$(this).attr(
-					'_',
-					`on intersection(intersecting) having threshold 0.5
-										if intersecting transition opacity to 1
-										else transition opacity to 0`
-				);
-			});
+		// $('main > section div')
+		// 	.not('.sphere-animation')
+		// 	.filter(function () {
+		// 		// Check if the div has child nodes other than div or img elements
+		// 		return $(this).children().not('div').length > 0;
+		// 	})
+		// 	.each(function () {
+		// 		// Add attributes to each selected element
+		// 		$(this).attr(
+		// 			'_',
+		// 			`on intersection(intersecting) having threshold 0.5
+		// 								if intersecting transition opacity to 1
+		// 								else transition opacity to 0`
+		// 		);
+		// 	});
 
-		const dom = $('html').html();
+		const dom = $('body').html()?.split('https://dev.domartisan.com').join('').split('dev.domartisan.com').join('');
 
 		return {
 			props: {
@@ -106,4 +106,4 @@ export async function load({ params }) {
 	}
 }
 
-export const prerender = true;
+// export const prerender = true;
