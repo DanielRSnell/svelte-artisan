@@ -3,12 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<script src="https://media.domartisan.com/scripts/htmx/core.js"></script>
-		<script src="https://unpkg.com/htmx.org/dist/ext/morphdom-swap.js"></script>
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
-	<body hx-ext="morphdom-swap">
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>

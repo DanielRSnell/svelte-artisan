@@ -7,6 +7,13 @@
 	<slot />
 </div>
 
+{#if browser}
+
+		<script src="https://media.domartisan.com/scripts/htmx/core.js"></script>
+		<!-- <script src="https://unpkg.com/htmx.org/dist/ext/morphdom-swap.js"></script> -->
+
+{/if}
+
 <style>
 	body > div > .skip-link {
 		display: none;

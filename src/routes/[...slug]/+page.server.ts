@@ -16,7 +16,7 @@ export async function load({ params }) {
 		return route;
 	}
 
-	const url = `${config.project}` + GenerateRoute();
+	const url = `${config.project}/` + GenerateRoute();
 	console.log(`🔥 ${url} is building.`);
 	try {
 		const response = await got(url.split('/?').join('?'));
@@ -106,4 +106,4 @@ export async function load({ params }) {
 	}
 }
 
-// export const prerender = true;
+export const prerender = true;
