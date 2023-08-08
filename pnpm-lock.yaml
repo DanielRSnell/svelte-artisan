@@ -17,6 +17,9 @@ dependencies:
   cheerio:
     specifier: 1.0.0-rc.12
     version: 1.0.0-rc.12
+  morphdom:
+    specifier: ^2.7.0
+    version: 2.7.0
 
 devDependencies:
   '@floating-ui/dom':
@@ -2762,6 +2765,10 @@ packages:
       pkg-types: 1.0.3
       ufo: 1.2.0
     dev: true
+
+  /morphdom@2.7.0:
+    resolution: {integrity: sha512-8L8DwbdjjWwM/aNqj7BSoSn4G7SQLNiDcxCnMWbf506jojR6lNQ5YOmQqXEIE8u3C492UlkN4d0hQwz97+M1oQ==}
+    dev: false
 
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}

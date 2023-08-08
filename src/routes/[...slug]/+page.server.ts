@@ -16,7 +16,7 @@ export async function load({ params }) {
 		return route;
 	}
 
-	const url = `${config.project}/` + GenerateRoute();
+	const url = `${config.project}` + GenerateRoute();
 	console.log(`🔥 ${url} is building.`);
 	try {
 		const response = await got(url.split('/?').join('?'));
@@ -42,6 +42,10 @@ export async function load({ params }) {
 			});
 		});
 
+		$('[hx-swap]').each((i, element) => {
+			// Update the hx-swap attribute value to "morphdom"
+			$(element).attr('hx-swap', 'morphdom');
+		});
 		// You can include the line below if you want to remove all script tags
 		// $('script').remove();
 		// Iterate over each img tag
@@ -87,7 +91,12 @@ export async function load({ params }) {
 		// 		);
 		// 	});
 
-		const dom = $('body').html()?.split('https://dev.domartisan.com').join('').split('dev.domartisan.com').join('');
+		const dom = $('body')
+			.html()
+			?.split('https://dev.domartisan.com')
+			.join('')
+			.split('dev.domartisan.com')
+			.join('');
 
 		return {
 			props: {

@@ -141,5 +141,4 @@
 	</div>
 </section>
 
-
 <main transition:fade>{@html bodyContent}</main>
